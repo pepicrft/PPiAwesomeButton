@@ -13,7 +13,8 @@ Pod::Spec.new do |s|
                     DESC
   s.requires_arc = true
   s.source_files = 'Control/*.{h,m}'
-  s.resources = "/Control/*.ttf"
+  s.resources = "Control/*.ttf"
   s.framework = 'QuartzCore'
   s.public_header_files = 'Control/*.h'
+  s.dependency 'FontAwesome+iOS', :local => 'Control/FontAwesome+iOS'
 end
