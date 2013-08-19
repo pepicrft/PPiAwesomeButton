@@ -1,0 +1,14 @@
+PODS:
+  - FontAwesome+iOS (0.0.1)
+
+DEPENDENCIES:
+  - FontAwesome+iOS (from `https://github.com/alexdrone/ios-fontawesome.git`)
+
+EXTERNAL SOURCES:
+  FontAwesome+iOS:
+    :git: https://github.com/alexdrone/ios-fontawesome.git
+
+SPEC CHECKSUMS:
+  FontAwesome+iOS: 2aa702396e80d0f9a553a8110fc6de660ad2c8e3
+
+COCOAPODS: 0.23.0
