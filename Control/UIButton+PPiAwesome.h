@@ -22,6 +22,7 @@ typedef enum {
 -(void)setTextAttributes:(NSDictionary*)attributes forUIControlState:(UIControlState)state;
 -(void)setBackgroundColor:(UIColor*)color forUIControlState:(UIControlState)state;
 -(void)setIconPosition:(IconPosition)position;
+-(void)setButtonText:(NSString*)text;
 -(void)setButtonIcon:(NSString*)icon;
 -(void)setRadius:(CGFloat)radius;
 @end
