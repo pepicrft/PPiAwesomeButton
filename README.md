@@ -17,6 +17,14 @@ UIButton category with new methods to setup a button with text + FontAwesome Ico
 **buttonRadius-**```-(void)setRadius:(CGFloat)radius;```
 
 ## Install
+The easiest way to install PPiAwesomeButton is using CocoaPods:
+
+1) Add the pod to podfile ```pod 'PPiAwesomeButton'```
+
+2) Refresh your project pods ```pod install```
+
+3) Add awesome font to your Info.plists setting `UIAppFonts` entry as array and adding `FontAwesome.ttf` to this array.
+
 
 ## Example of using
 Here is an example of using for generate an UIButton with Twitter design
