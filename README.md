@@ -16,6 +16,8 @@ UIButton category with new methods to setup a button with text + FontAwesome Ico
 **buttonIcon-**```-(void)setButtonIcon:(NSString*)icon;```
 **buttonRadius-**```-(void)setRadius:(CGFloat)radius;```
 
+## Install
+
 ## Example of using
 Here is an example of using for generate an UIButton with Twitter design
 ```
@@ -52,4 +54,28 @@ UIButton *facetime1=[UIButton buttonWithType:UIButtonTypeCustom text:@"Facetime"
 
 ## Screenshot
 ![image](http://img189.imageshack.us/img189/3955/07yh.gif)
+
+## Attributed Strings : Attributes List
+
+Attributes that you can apply to text in an attributed string.
+```
+NSString *const NSFontAttributeName;
+NSString *const NSParagraphStyleAttributeName;
+NSString *const NSForegroundColorAttributeName;
+NSString *const NSBackgroundColorAttributeName;
+NSString *const NSLigatureAttributeName;
+NSString *const NSKernAttributeName;
+NSString *const NSStrikethroughStyleAttributeName;
+NSString *const NSUnderlineStyleAttributeName;
+NSString *const NSStrokeColorAttributeName;
+NSString *const NSStrokeWidthAttributeName;
+NSString *const NSShadowAttributeName;
+NSString *const NSVerticalGlyphFormAttributeName;
+```
+Full list [here](https://developer.apple.com/library/ios/documentation/uikit/reference/NSAttributedString_UIKit_Additions/Reference/Reference.html)
+
+## Font Awesome Icons
+![image](http://img819.imageshack.us/img819/7605/nw0b.png)
+
+You'll find the list of Awesome Icons [here](http://fortawesome.github.io/Font-Awesome/icons/). Each icon has an identifier that you have to use in UIButton to add an Icon to your UIButton.
 
