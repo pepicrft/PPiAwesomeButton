@@ -40,57 +40,58 @@ static char isAwesomeKey;
 }
 
 -(void)updateButtonFormatForUIControlState:(UIControlState)state{
-    
-    //Mutable String to set to the button
-    NSMutableAttributedString *mutableString=[[NSMutableAttributedString alloc] init];
-    
-    //Mutable String of text
-    NSMutableAttributedString *mutableStringText=[[NSMutableAttributedString alloc] initWithString:[self buttonText]];
-    
-    //Mutable String of icon
-    NSMutableAttributedString *mutableStringIcon=[[NSMutableAttributedString alloc] initWithString:@""];
-    if([self buttonIcon])
-        [mutableStringIcon appendAttributedString:[[NSAttributedString alloc] initWithString:[NSString fontAwesomeIconStringForIconIdentifier:[self buttonIcon]]]];
-    
-    
-    //Setting color
-    UIColor *color=[self backgroundColors][@(state)];
-    if(!color)
-        color=[self backgroundColors][@(UIControlStateNormal)];
-
-    if(color){
-        [self setBackgroundColor:color];
-    }
-    
-    //Setting attributes
-    NSDictionary *textAttributes=[self textAttributes][@(state)];
-    if(!textAttributes)
-        textAttributes=[self textAttributes][@(UIControlStateNormal)];
-    if(textAttributes){
-        //Setting attributes to text
-        [mutableStringText setAttributes:textAttributes range:NSMakeRange(0, [[self buttonText] length])];
+    if([self isAwesome]){
+        //Mutable String to set to the button
+        NSMutableAttributedString *mutableString=[[NSMutableAttributedString alloc] init];
         
-        //Setting attributes to icon
-        UIFont *textFont=(UIFont*)textAttributes[NSFontAttributeName];
-        NSMutableDictionary *iconAttributes=[textAttributes mutableCopy];
-        iconAttributes[NSFontAttributeName]=[UIFont fontWithName:@"fontawesome" size:textFont.pointSize];
-        [mutableStringIcon setAttributes:iconAttributes range:NSMakeRange(0, 1)];
+        //Mutable String of text
+        NSMutableAttributedString *mutableStringText=[[NSMutableAttributedString alloc] initWithString:[self buttonText]];
+        
+        //Mutable String of icon
+        NSMutableAttributedString *mutableStringIcon=[[NSMutableAttributedString alloc] initWithString:@""];
+        if([self buttonIcon])
+            [mutableStringIcon appendAttributedString:[[NSAttributedString alloc] initWithString:[NSString fontAwesomeIconStringForIconIdentifier:[self buttonIcon]]]];
+        
+        
+        //Setting color
+        UIColor *color=[self backgroundColors][@(state)];
+        if(!color)
+            color=[self backgroundColors][@(UIControlStateNormal)];
+        
+        if(color){
+            [self setBackgroundColor:color];
+        }
+        
+        //Setting attributes
+        NSDictionary *textAttributes=[self textAttributes][@(state)];
+        if(!textAttributes)
+            textAttributes=[self textAttributes][@(UIControlStateNormal)];
+        if(textAttributes){
+            //Setting attributes to text
+            [mutableStringText setAttributes:textAttributes range:NSMakeRange(0, [[self buttonText] length])];
+            
+            //Setting attributes to icon
+            UIFont *textFont=(UIFont*)textAttributes[NSFontAttributeName];
+            NSMutableDictionary *iconAttributes=[textAttributes mutableCopy];
+            iconAttributes[NSFontAttributeName]=[UIFont fontWithName:@"fontawesome" size:textFont.pointSize];
+            [mutableStringIcon setAttributes:iconAttributes range:NSMakeRange(0, 1)];
+        }
+        
+        //Concatenating
+        if([self iconPosition]==IconPositionLeft){
+            [mutableString appendAttributedString:mutableStringIcon];
+            [mutableString appendAttributedString:[[NSMutableAttributedString alloc] initWithString:@" "]];
+            [mutableString appendAttributedString:mutableStringText];
+        }else{
+            [mutableString appendAttributedString:mutableStringText];
+            [mutableString appendAttributedString:[[NSMutableAttributedString alloc] initWithString:@" "]];
+            [mutableString appendAttributedString:mutableStringIcon];
+        }
+        
+        
+        //Setting to the button
+        [self setAttributedTitle:mutableString forState:UIControlStateNormal];
     }
-    
-    //Concatenating
-    if([self iconPosition]==IconPositionLeft){
-        [mutableString appendAttributedString:mutableStringIcon];
-        [mutableString appendAttributedString:[[NSMutableAttributedString alloc] initWithString:@" "]];
-        [mutableString appendAttributedString:mutableStringText];
-    }else{
-        [mutableString appendAttributedString:mutableStringText];
-        [mutableString appendAttributedString:[[NSMutableAttributedString alloc] initWithString:@" "]];
-        [mutableString appendAttributedString:mutableStringIcon];
-    }
-    
-    
-    //Setting to the button
-    [self setAttributedTitle:mutableString forState:UIControlStateNormal];
 }
 -(void)setRadius:(CGFloat)radius{
     self.layer.cornerRadius=radius;
