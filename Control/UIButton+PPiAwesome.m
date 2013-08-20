@@ -19,6 +19,7 @@ static char isAwesomeKey;
 
 +(UIButton*)buttonWithType:(UIButtonType)type text:(NSString*)text icon:(NSString*)icon textAttributes:(NSDictionary*)attributes andIconPosition:(IconPosition)position{
     UIButton *button =[UIButton buttonWithType:type];
+    [button setIsAwesome:YES];
     [button setButtonText:text];
     [button setButtonIcon:icon];
     [button setTextAttributes:attributes forUIControlState:UIControlStateNormal];
@@ -30,11 +31,12 @@ static char isAwesomeKey;
 -(id)initWithFrame:(CGRect)frame text:(NSString*)text icon:(NSString*)icon textAttributes:(NSDictionary*)attributes andIconPosition:(IconPosition)position{
     self=[super initWithFrame:frame];
     if(self){
+        [self setIsAwesome:YES];
+
         [self setButtonText:text];
         [self setButtonIcon:icon];
         [self setTextAttributes:attributes forUIControlState:UIControlStateNormal];
         [self setIconPosition:position];
-        [self setIsAwesome:YES];
     }
     return self;
 }
@@ -45,7 +47,9 @@ static char isAwesomeKey;
         NSMutableAttributedString *mutableString=[[NSMutableAttributedString alloc] init];
         
         //Mutable String of text
-        NSMutableAttributedString *mutableStringText=[[NSMutableAttributedString alloc] initWithString:[self buttonText]];
+        NSMutableAttributedString *mutableStringText=[[NSMutableAttributedString alloc] initWithString:@""];
+        if([self buttonText])
+            [mutableStringText appendAttributedString:[[NSAttributedString alloc] initWithString:[self buttonText]]];
         
         //Mutable String of icon
         NSMutableAttributedString *mutableStringIcon=[[NSMutableAttributedString alloc] initWithString:@""];
@@ -71,10 +75,12 @@ static char isAwesomeKey;
             [mutableStringText setAttributes:textAttributes range:NSMakeRange(0, [[self buttonText] length])];
             
             //Setting attributes to icon
-            UIFont *textFont=(UIFont*)textAttributes[NSFontAttributeName];
-            NSMutableDictionary *iconAttributes=[textAttributes mutableCopy];
-            iconAttributes[NSFontAttributeName]=[UIFont fontWithName:@"fontawesome" size:textFont.pointSize];
-            [mutableStringIcon setAttributes:iconAttributes range:NSMakeRange(0, 1)];
+            if([self buttonIcon]){
+                UIFont *textFont=(UIFont*)textAttributes[NSFontAttributeName];
+                NSMutableDictionary *iconAttributes=[textAttributes mutableCopy];
+                iconAttributes[NSFontAttributeName]=[UIFont fontWithName:@"fontawesome" size:textFont.pointSize];
+                [mutableStringIcon setAttributes:iconAttributes range:NSMakeRange(0, 1)];
+            }
         }
         
         //Concatenating
@@ -114,7 +120,7 @@ static char isAwesomeKey;
 
 - (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     [super touchesEnded:touches withEvent:event];
-    if([self isAwesome])
+    //if([self isAwesome])
         [self updateButtonFormatForUIControlState:UIControlStateNormal];
 }
 

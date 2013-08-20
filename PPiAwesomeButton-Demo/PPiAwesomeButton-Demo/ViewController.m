@@ -87,6 +87,14 @@
     pinterest2.frame=CGRectMake(10, 270, 280, 50);
     [pinterest2 setRadius:0.0];
     [self.view addSubview:pinterest2];
+    
+    UIButton *pinterest3=[UIButton buttonWithType:UIButtonTypeCustom text:@"Pin it!" icon:nil textAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:32],NSForegroundColorAttributeName:[UIColor whiteColor]} andIconPosition:IconPositionLeft];
+    [pinterest3 setBackgroundColor:[UIColor colorWithRed:205.0f/255 green:35.0f/255 blue:44.0f/255 alpha:1.0] forUIControlState:UIControlStateNormal];
+    [pinterest3 setBackgroundColor:[UIColor colorWithRed:244.0f/255 green:61.0f/255 blue:91.0f/255 alpha:1.0] forUIControlState:UIControlStateHighlighted];
+    
+    pinterest3.frame=CGRectMake(10, 330, 280, 50);
+    [pinterest3 setRadius:0.0];
+    [self.view addSubview:pinterest3];
 
     
 }
