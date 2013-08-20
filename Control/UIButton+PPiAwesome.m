@@ -13,6 +13,7 @@ static char buttonIconKey;
 static char iconPositionKey;
 static char backgroundColorsKey;
 static char textAttributesKey;
+static char isAwesomeKey;
 
 @implementation UIButton (PPiAwesome)
 
@@ -22,6 +23,8 @@ static char textAttributesKey;
     [button setButtonIcon:icon];
     [button setTextAttributes:attributes forUIControlState:UIControlStateNormal];
     [button setIconPosition:position];
+    [button setIsAwesome:YES];
+
     return button;
 }
 -(id)initWithFrame:(CGRect)frame text:(NSString*)text icon:(NSString*)icon textAttributes:(NSDictionary*)attributes andIconPosition:(IconPosition)position{
@@ -31,6 +34,7 @@ static char textAttributesKey;
         [self setButtonIcon:icon];
         [self setTextAttributes:attributes forUIControlState:UIControlStateNormal];
         [self setIconPosition:position];
+        [self setIsAwesome:YES];
     }
     return self;
 }
@@ -44,8 +48,9 @@ static char textAttributesKey;
     NSMutableAttributedString *mutableStringText=[[NSMutableAttributedString alloc] initWithString:[self buttonText]];
     
     //Mutable String of icon
-    NSMutableAttributedString *mutableStringIcon=[[NSMutableAttributedString alloc] initWithString:[NSString fontAwesomeIconStringForIconIdentifier:[self buttonIcon]]];
-    
+    NSMutableAttributedString *mutableStringIcon=[[NSMutableAttributedString alloc] initWithString:@""];
+    if([self buttonIcon])
+        [mutableStringIcon appendAttributedString:[[NSAttributedString alloc] initWithString:[NSString fontAwesomeIconStringForIconIdentifier:[self buttonIcon]]]];
     
     
     //Setting color
@@ -96,17 +101,20 @@ static char textAttributesKey;
 
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
 	[super touchesBegan:touches withEvent:event];
-    [self updateButtonFormatForUIControlState:UIControlStateHighlighted];
+    if([self isAwesome])
+        [self updateButtonFormatForUIControlState:UIControlStateHighlighted];
 }
 
 - (void) touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
 	[super touchesCancelled:touches withEvent:event];
-    [self updateButtonFormatForUIControlState:UIControlStateNormal];
+    if([self isAwesome])
+        [self updateButtonFormatForUIControlState:UIControlStateNormal];
 }
 
 - (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     [super touchesEnded:touches withEvent:event];
-    [self updateButtonFormatForUIControlState:UIControlStateNormal];
+    if([self isAwesome])
+        [self updateButtonFormatForUIControlState:UIControlStateNormal];
 }
 
 
@@ -168,6 +176,14 @@ static char textAttributesKey;
 }
 - (IconPosition) iconPosition {
     return [objc_getAssociatedObject(self, &iconPositionKey) intValue];
+}
+
+-(void)setIsAwesome:(BOOL)awesome{
+    objc_setAssociatedObject(self, &isAwesomeKey,@(awesome), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    [self updateButtonFormatForUIControlState:UIControlStateNormal];
+}
+- (BOOL) isAwesome {
+    return objc_getAssociatedObject(self, &isAwesomeKey)?YES:NO;
 }
 
 @end
