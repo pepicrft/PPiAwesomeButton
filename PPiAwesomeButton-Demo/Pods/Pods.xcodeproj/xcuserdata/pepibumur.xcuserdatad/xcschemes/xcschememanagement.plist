@@ -19,6 +19,11 @@
 			<key>orderHint</key>
 			<integer>3</integer>
 		</dict>
+		<key>Pods-PPiAwesomeButton.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -27,7 +32,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>13BF9A095B6145CC80AE2379</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>1CF072DF266E40679B1D850B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>260A240FF4A6427C89E24A57</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -48,6 +63,11 @@
 			<true/>
 		</dict>
 		<key>8BBE9064A0DC4622894F64EB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9D66FBD7885742A8B099FE40</key>
 		<dict>
 			<key>primary</key>
 			<true/>

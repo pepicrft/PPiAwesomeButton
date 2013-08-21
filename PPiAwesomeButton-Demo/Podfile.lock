@@ -1,14 +1,13 @@
 PODS:
   - FontAwesome+iOS (0.0.1)
+  - PPiAwesomeButton (1.2.1):
+    - FontAwesome+iOS
 
 DEPENDENCIES:
-  - FontAwesome+iOS (from `https://github.com/alexdrone/ios-fontawesome.git`)
-
-EXTERNAL SOURCES:
-  FontAwesome+iOS:
-    :git: https://github.com/alexdrone/ios-fontawesome.git
+  - PPiAwesomeButton
 
 SPEC CHECKSUMS:
   FontAwesome+iOS: 2aa702396e80d0f9a553a8110fc6de660ad2c8e3
+  PPiAwesomeButton: e15fdf1d9297c5f0bc5c7b383c1090c7e8f32ede
 
 COCOAPODS: 0.23.0
