@@ -19,7 +19,11 @@ UIButton category with new methods to setup a button with text + FontAwesome Ico
 ## Install
 The easiest way to install PPiAwesomeButton is using CocoaPods:
 
-1) Add the pod to podfile ```pod 'PPiAwesomeButton'```
+1) Add the pod to podfile 
+```
+pod 'PPiAwesomeButton'
+pod 'FontAwesome+iOS', :git => 'git@github.com:alexdrone/ios-fontawesome.git'
+```
 
 2) Refresh your project pods ```pod install```
 
