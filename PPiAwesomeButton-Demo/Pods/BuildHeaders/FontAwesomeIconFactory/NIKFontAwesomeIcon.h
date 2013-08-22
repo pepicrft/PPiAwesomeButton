@@ -1,1 +1,0 @@
-../../FontAwesomeIconFactory/NIKFontAwesomeIcon.h

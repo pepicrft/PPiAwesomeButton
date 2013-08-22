@@ -1,2 +1,2 @@
 platform :ios, '6.0'
-pod 'PPiAwesomeButton'
+pod 'FontAwesome+iOS'

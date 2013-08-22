@@ -12,15 +12,3 @@
 #define COCOAPODS_VERSION_MINOR_FontAwesome_iOS 0
 #define COCOAPODS_VERSION_PATCH_FontAwesome_iOS 1
 
-// FontAwesomeIconFactory
-#define COCOAPODS_POD_AVAILABLE_FontAwesomeIconFactory
-#define COCOAPODS_VERSION_MAJOR_FontAwesomeIconFactory 1
-#define COCOAPODS_VERSION_MINOR_FontAwesomeIconFactory 2
-#define COCOAPODS_VERSION_PATCH_FontAwesomeIconFactory 0
-
-// PPiAwesomeButton
-#define COCOAPODS_POD_AVAILABLE_PPiAwesomeButton
-#define COCOAPODS_VERSION_MAJOR_PPiAwesomeButton 1
-#define COCOAPODS_VERSION_MINOR_PPiAwesomeButton 2
-#define COCOAPODS_VERSION_PATCH_PPiAwesomeButton 1
-

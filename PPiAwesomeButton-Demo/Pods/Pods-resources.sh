@@ -40,8 +40,6 @@ install_resource()
   esac
 }
 install_resource "FontAwesome+iOS/Resources/FontAwesome.ttf"
-install_resource "FontAwesomeIconFactory/Font-Awesome/src/assets/font-awesome/font/FontAwesome.otf"
-install_resource "PPiAwesomeButton/Control/fontawesome-webfont.ttf"
 
 rsync -avr --no-relative --exclude '*/.svn/*' --files-from="$RESOURCES_TO_COPY" / "${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"
 rm -f "$RESOURCES_TO_COPY"

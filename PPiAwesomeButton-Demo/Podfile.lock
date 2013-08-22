@@ -1,16 +1,10 @@
 PODS:
   - FontAwesome+iOS (0.0.1)
-  - FontAwesomeIconFactory (1.2)
-  - PPiAwesomeButton (1.2.1):
-    - FontAwesome+iOS
 
 DEPENDENCIES:
-  - FontAwesomeIconFactory
-  - PPiAwesomeButton
+  - FontAwesome+iOS
 
 SPEC CHECKSUMS:
   FontAwesome+iOS: 2aa702396e80d0f9a553a8110fc6de660ad2c8e3
-  FontAwesomeIconFactory: 0d1f4593693d4b79a5cb20b5fedcb454b68cb970
-  PPiAwesomeButton: e15fdf1d9297c5f0bc5c7b383c1090c7e8f32ede
 
 COCOAPODS: 0.23.0

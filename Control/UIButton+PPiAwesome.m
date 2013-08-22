@@ -14,6 +14,7 @@ static char iconPositionKey;
 static char backgroundColorsKey;
 static char textAttributesKey;
 static char isAwesomeKey;
+static char separationKey;
 
 @implementation UIButton (PPiAwesome)
 
@@ -83,14 +84,25 @@ static char isAwesomeKey;
             }
         }
         
+        //Separation
+        NSMutableString *separationString=[NSMutableString stringWithFormat:@""];
+        if([self separation]){
+            int separationInt=[[self separation] intValue];
+            for(int i=0;i<separationInt;i++){
+                [separationString appendString:@" "];
+            }
+        }
+        
         //Concatenating
         if([self iconPosition]==IconPositionLeft){
             [mutableString appendAttributedString:mutableStringIcon];
             [mutableString appendAttributedString:[[NSMutableAttributedString alloc] initWithString:@" "]];
+            [mutableString appendAttributedString:[[NSMutableAttributedString alloc] initWithString:separationString]];
             [mutableString appendAttributedString:mutableStringText];
         }else{
             [mutableString appendAttributedString:mutableStringText];
             [mutableString appendAttributedString:[[NSMutableAttributedString alloc] initWithString:@" "]];
+            [mutableString appendAttributedString:[[NSMutableAttributedString alloc] initWithString:separationString]];
             [mutableString appendAttributedString:mutableStringIcon];
         }
         
@@ -175,6 +187,14 @@ static char isAwesomeKey;
 }
 - (NSString*) buttonIcon {
     return objc_getAssociatedObject(self, &buttonIconKey);
+}
+
+-(void)setSeparation:(NSUInteger)separation{
+    objc_setAssociatedObject(self, &separationKey,@(separation), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    [self updateButtonFormatForUIControlState:UIControlStateNormal];
+}
+- (NSNumber*) separation {
+    return objc_getAssociatedObject(self, &separationKey);
 }
 
 -(void)setIconPosition:(IconPosition)position{
