@@ -1,5 +1,5 @@
 #include "Pods-PPiAwesomeButton.xcconfig"
 GCC_PREPROCESSOR_DEFINITIONS = COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/BuildHeaders" "${PODS_ROOT}/BuildHeaders/PPiAwesomeButton" "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/FontAwesome+iOS" "${PODS_ROOT}/Headers/PPiAwesomeButton"
+HEADER_SEARCH_PATHS = "${PODS_ROOT}/BuildHeaders" "${PODS_ROOT}/BuildHeaders/PPiAwesomeButton" "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/FontAwesome+iOS" "${PODS_ROOT}/Headers/FontAwesomeIconFactory" "${PODS_ROOT}/Headers/PPiAwesomeButton"
 OTHER_LDFLAGS = -ObjC ${PODS_PPIAWESOMEBUTTON_OTHER_LDFLAGS}
 PODS_ROOT = ${SRCROOT}

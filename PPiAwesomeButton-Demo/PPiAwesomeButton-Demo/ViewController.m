@@ -74,7 +74,7 @@
     [facetime2 setRadius:22.0];
     [self.view addSubview:facetime2];
     
-    UIButton *pinterest1=[UIButton buttonWithType:UIButtonTypeCustom text:@"Pin it!" icon:@"icon-rocket" textAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:32],NSForegroundColorAttributeName:[UIColor whiteColor]} andIconPosition:IconPositionLeft];
+    UIButton *pinterest1=[UIButton buttonWithType:UIButtonTypeCustom text:@"Pin it!" icon:@"icon-html5" textAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:32],NSForegroundColorAttributeName:[UIColor whiteColor]} andIconPosition:IconPositionLeft];
     [pinterest1 setBackgroundColor:[UIColor colorWithRed:205.0f/255 green:35.0f/255 blue:44.0f/255 alpha:1.0] forUIControlState:UIControlStateNormal];
     pinterest1.frame=CGRectMake(10, 210, 150, 50);
     [pinterest1 setRadius:0.0];
