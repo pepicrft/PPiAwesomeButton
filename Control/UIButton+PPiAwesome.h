@@ -26,5 +26,6 @@ typedef enum {
 -(void)setButtonIcon:(NSString*)icon;
 -(void)setRadius:(CGFloat)radius;
 -(void)setSeparation:(NSUInteger)separation;
+-(void)setIsAwesome:(BOOL)isAwesome;
 
 @end
