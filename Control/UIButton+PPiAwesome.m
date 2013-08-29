@@ -110,8 +110,12 @@ static char textAligmentKey;
             if([self buttonIcon] || [self buttonIconString]){
                 UIFont *textFont=(UIFont*)textAttributes[NSFontAttributeName];
                 NSMutableDictionary *iconAttributes=[textAttributes mutableCopy];
-                iconAttributes[NSFontAttributeName]=[UIFont fontWithName:@"fontawesome" size:textFont.pointSize];
-                [mutableStringIcon setAttributes:iconAttributes range:NSMakeRange(0, [mutableStringIcon length])];
+                if ([textAttributes objectForKey:@"IconFont"]) {
+                    iconAttributes[NSFontAttributeName] = textAttributes[@"IconFont"];
+                }else{
+                    iconAttributes[NSFontAttributeName]=[UIFont fontWithName:@"fontawesome" size:textFont.pointSize];
+                }
+                [mutableStringIcon setAttributes:iconAttributes range:NSMakeRange(0, 1)];
             }
         }
         
@@ -222,6 +226,7 @@ static char textAligmentKey;
     objc_setAssociatedObject(self, &buttonIconKey,icon, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     [self updateButtonFormatForUIControlState:UIControlStateNormal];
 }
+
 - (NSString*) buttonIcon {
     return objc_getAssociatedObject(self, &buttonIconKey);
 }
