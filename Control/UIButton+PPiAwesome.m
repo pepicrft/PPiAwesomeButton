@@ -115,7 +115,7 @@ static char textAligmentKey;
                 }else{
                     iconAttributes[NSFontAttributeName]=[UIFont fontWithName:@"fontawesome" size:textFont.pointSize];
                 }
-                [mutableStringIcon setAttributes:iconAttributes range:NSMakeRange(0, 1)];
+                [mutableStringIcon setAttributes:iconAttributes range:NSMakeRange(0, [mutableStringIcon length])];
             }
         }
         
