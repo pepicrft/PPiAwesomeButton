@@ -79,7 +79,11 @@ static char separationKey;
             if([self buttonIcon]){
                 UIFont *textFont=(UIFont*)textAttributes[NSFontAttributeName];
                 NSMutableDictionary *iconAttributes=[textAttributes mutableCopy];
-                iconAttributes[NSFontAttributeName]=[UIFont fontWithName:@"fontawesome" size:textFont.pointSize];
+                if ([textAttributes objectForKey:@"IconFont"]) {
+                    iconAttributes[NSFontAttributeName] = textAttributes[@"IconFont"];
+                }else{
+                    iconAttributes[NSFontAttributeName]=[UIFont fontWithName:@"fontawesome" size:textFont.pointSize];
+                }
                 [mutableStringIcon setAttributes:iconAttributes range:NSMakeRange(0, 1)];
             }
         }
@@ -185,6 +189,7 @@ static char separationKey;
     objc_setAssociatedObject(self, &buttonIconKey,icon, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     [self updateButtonFormatForUIControlState:UIControlStateNormal];
 }
+
 - (NSString*) buttonIcon {
     return objc_getAssociatedObject(self, &buttonIconKey);
 }
