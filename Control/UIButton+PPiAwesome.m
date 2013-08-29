@@ -16,7 +16,6 @@ static char backgroundColorsKey;
 static char textAttributesKey;
 static char isAwesomeKey;
 static char separationKey;
-static char textAligmentKey;
 
 
 @implementation UIButton (PPiAwesome)
@@ -141,12 +140,6 @@ static char textAligmentKey;
             [mutableString appendAttributedString:mutableStringIcon];
         }
         
-        //Adding textAligment
-        if([self textAligment]){
-            NSMutableParagraphStyle *paragraph = [[NSMutableParagraphStyle alloc] init];
-            paragraph.alignment = NSTextAlignmentRight;
-            [mutableString addAttribute:NSParagraphStyleAttributeName value:paragraph range:NSMakeRange(0, [mutableString length])];
-        }
         
         //Setting to the button
         [self setAttributedTitle:mutableString forState:UIControlStateNormal];
@@ -259,12 +252,5 @@ static char textAligmentKey;
 }
 - (BOOL) isAwesome {
     return objc_getAssociatedObject(self, &isAwesomeKey)?YES:NO;
-}
--(void)setTextAligment:(NSTextAlignment)textAligment{
-    objc_setAssociatedObject(self, &textAligmentKey,@(textAligment), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
-    [self updateButtonFormatForUIControlState:UIControlStateNormal];
-}
--(NSTextAlignment)textAligment{
-    return [(objc_getAssociatedObject(self, &textAligmentKey)) intValue];
 }
 @end

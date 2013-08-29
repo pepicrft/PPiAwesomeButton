@@ -104,7 +104,6 @@
     [button4 setButtonIconString:[NSString stringWithFormat:@"%@ %@",[NSString fontAwesomeIconStringForEnum:FAIconTwitter],[NSString fontAwesomeIconStringForEnum:FAIconFacebook]]];
     [button4 setRadius:0.0];
     [button4 setSeparation:3];
-    [button4 setTextAligment:NSTextAlignmentLeft];
     [self.view addSubview:button4];
 }
 
