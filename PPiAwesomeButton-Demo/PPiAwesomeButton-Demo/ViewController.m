@@ -91,11 +91,21 @@
     UIButton *pinterest3=[UIButton buttonWithType:UIButtonTypeCustom text:@"Pin it!" icon:@"icon-pinterest" textAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:32],NSForegroundColorAttributeName:[UIColor whiteColor]} andIconPosition:IconPositionLeft];
     [pinterest3 setBackgroundColor:[UIColor colorWithRed:205.0f/255 green:35.0f/255 blue:44.0f/255 alpha:1.0] forUIControlState:UIControlStateNormal];
     [pinterest3 setBackgroundColor:[UIColor colorWithRed:244.0f/255 green:61.0f/255 blue:91.0f/255 alpha:1.0] forUIControlState:UIControlStateHighlighted];
-    
     pinterest3.frame=CGRectMake(10, 330, 280, 50);
     [pinterest3 setRadius:0.0];
     [pinterest3 setSeparation:10];
     [self.view addSubview:pinterest3];
+    
+    
+    UIButton *button4=[UIButton buttonWithType:UIButtonTypeCustom text:@"Prueba" icon:nil textAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:32],NSForegroundColorAttributeName:[UIColor whiteColor]} andIconPosition:IconPositionLeft];
+    [button4 setBackgroundColor:[UIColor colorWithRed:205.0f/255 green:35.0f/255 blue:44.0f/255 alpha:1.0] forUIControlState:UIControlStateNormal];
+    [button4 setBackgroundColor:[UIColor colorWithRed:244.0f/255 green:61.0f/255 blue:91.0f/255 alpha:1.0] forUIControlState:UIControlStateHighlighted];
+    button4.frame=CGRectMake(10, 400, 280, 50);
+    [button4 setButtonIconString:[NSString stringWithFormat:@"%@ %@",[NSString fontAwesomeIconStringForEnum:FAIconTwitter],[NSString fontAwesomeIconStringForEnum:FAIconFacebook]]];
+    [button4 setRadius:0.0];
+    [button4 setSeparation:3];
+    [button4 setTextAligment:NSTextAlignmentLeft];
+    [self.view addSubview:button4];
 }
 
 - (void)didReceiveMemoryWarning
