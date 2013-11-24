@@ -16,18 +16,21 @@ typedef enum {
 } IconPosition;
 
 @interface UIButton (PPiAwesome)
-+(UIButton*)buttonWithType:(UIButtonType)type text:(NSString*)text icon:(NSString*)icon textAttributes:(NSDictionary*)attributes andIconPosition:(IconPosition)position;
--(id)initWithFrame:(CGRect)frame text:(NSString*)text icon:(NSString*)icon textAttributes:(NSDictionary*)attributes andIconPosition:(IconPosition)position;
--(id)initWithFrame:(CGRect)frame text:(NSString*)text iconString:(NSString*)iconString textAttributes:(NSDictionary*)attributes andIconPosition:(IconPosition)position;
-+(UIButton*)buttonWithType:(UIButtonType)type text:(NSString*)text iconString:(NSString*)iconString textAttributes:(NSDictionary*)attributes andIconPosition:(IconPosition)position;
 
--(void)setTextAttributes:(NSDictionary*)attributes forUIControlState:(UIControlState)state;
--(void)setBackgroundColor:(UIColor*)color forUIControlState:(UIControlState)state;
--(void)setIconPosition:(IconPosition)position;
--(void)setButtonText:(NSString*)text;
--(void)setButtonIcon:(NSString*)icon;
--(void)setButtonIconString:(NSString *)icon;
--(void)setRadius:(CGFloat)radius;
--(void)setSeparation:(NSUInteger)separation;
--(void)setIsAwesome:(BOOL)isAwesome;
++ (UIButton*)buttonWithType:(UIButtonType)type text:(NSString*)text icon:(NSString*)icon textAttributes:(NSDictionary*)attributes andIconPosition:(IconPosition)position;
+- (id)initWithFrame:(CGRect)frame text:(NSString*)text icon:(NSString*)icon textAttributes:(NSDictionary*)attributes andIconPosition:(IconPosition)position;
+- (id)initWithFrame:(CGRect)frame text:(NSString*)text iconString:(NSString*)iconString textAttributes:(NSDictionary*)attributes andIconPosition:(IconPosition)position;
++ (UIButton*)buttonWithType:(UIButtonType)type text:(NSString*)text iconString:(NSString*)iconString textAttributes:(NSDictionary*)attributes andIconPosition:(IconPosition)position;
+
+- (void)updateButtonFormatForUIControlState:(UIControlState)state;
+- (void)setTextAttributes:(NSDictionary*)attributes forUIControlState:(UIControlState)state;
+- (void)setBackgroundColor:(UIColor*)color forUIControlState:(UIControlState)state;
+- (void)setIconPosition:(IconPosition)position;
+- (void)setButtonText:(NSString*)text;
+- (void)setButtonIcon:(NSString*)icon;
+- (void)setButtonIconString:(NSString *)icon;
+- (void)setRadius:(CGFloat)radius;
+- (void)setSeparation:(NSUInteger)separation;
+- (void)setIsAwesome:(BOOL)isAwesome;
+
 @end
