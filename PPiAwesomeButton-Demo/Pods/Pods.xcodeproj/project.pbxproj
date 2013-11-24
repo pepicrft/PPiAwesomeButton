@@ -1,1035 +1,457 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>0545D7391C13474A8B6EE4E0</key>
-		<dict>
-			<key>fileRef</key>
-			<string>08FAC8C73A4544ABB3A3D1A2</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>05D631F80DE84D2BBAD92904</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-FontAwesome+iOS-dummy.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>08A032F3569149F89CF1FC9A</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>E87EF5A2DA01402EB79BA769</string>
-				<string>B84C77766F0C47C787325453</string>
-				<string>FDC6CDDCA8934DAEAB95C3DC</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>08FAC8C73A4544ABB3A3D1A2</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-dummy.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>0E3299AFE65C4B2D95E7BD6F</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>6.0</string>
-				<key>STRIP_INSTALLED_PRODUCT</key>
-				<string>NO</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>0F2215476B504BE9ACA31F8F</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>F5F1095E1D804B00BDF12967</string>
-			<key>buildPhases</key>
-			<array>
-				<string>BC4BEC7DF7D54894B75ECBF7</string>
-				<string>4AA530BE180C412DAA8662BC</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>38C7FC905C3A482F89E1C48F</string>
-			</array>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>productName</key>
-			<string>Pods</string>
-			<key>productReference</key>
-			<string>6E5C48B61E5C4B4892033FAC</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>1018CA4E12C74138A04EBA53</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>FAImageView.m</string>
-			<key>path</key>
-			<string>FontAwesome+iOS/FAImageView.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>192E9E9A1F5F459EA5AA6C38</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B84C77766F0C47C787325453</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>1D7E5A4FD52348A9ACCEA37F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>84C9F658AA134E3F9F48A21A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1EDC2ACB7F16422B8392A9E9</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>name</key>
-			<string>Podfile</string>
-			<key>path</key>
-			<string>../Podfile</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-			<key>xcLanguageSpecificationIdentifier</key>
-			<string>xcode.lang.ruby</string>
-		</dict>
-		<key>1EE2590EB7124A8F88D3A918</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>B7920AD44A42467986F87C57</string>
-				<string>6E5C48B61E5C4B4892033FAC</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>21D02CD962594ED492196A69</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C8371B0C3AF2404E93F6E074</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc -DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>24CD545C8CE34F0FBCFAECB9</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>08A032F3569149F89CF1FC9A</string>
-				<string>1D7E5A4FD52348A9ACCEA37F</string>
-				<string>1EE2590EB7124A8F88D3A918</string>
-				<string>77E9C6D04E7641319B539D6F</string>
-				<string>1EDC2ACB7F16422B8392A9E9</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>258304025C5F44DDADE0E735</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>779C9243E87E47F79961A5B3</string>
-				<string>CBB4C2B5B47F4A6480178EAB</string>
-				<string>B219CECC007048CA85EFD6D6</string>
-				<string>66BEF2CBCA4E42BB9B84BE58</string>
-				<string>41708EC8572C459FB1D6BBCC</string>
-				<string>08FAC8C73A4544ABB3A3D1A2</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>28DEEEF7DFA24F76AEE9CC5A</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>779C9243E87E47F79961A5B3</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>ARCHS</key>
-				<string>$(ARCHS_STANDARD_32_BIT)</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_VERSION</key>
-				<string>com.apple.compilers.llvm.clang.1_0</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>6.0</string>
-				<key>OTHER_CFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_CPLUSPLUSFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>2F15731896644F308377CB4E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>D49BD911DD3648328FEAD02D</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Resources</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2F36F17B3FBB46268BE43CA3</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>4C4A0FC22C554043B3464EBB</string>
-				<string>1018CA4E12C74138A04EBA53</string>
-				<string>82F8E8B1EB4B4BD1B3C3668D</string>
-				<string>A218A69ABFD94A5AA11827FA</string>
-				<string>557559FF54EE4CCDB9C9189D</string>
-				<string>C8371B0C3AF2404E93F6E074</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Source Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>3277946CE68044FF9141B760</key>
-		<dict>
-			<key>containerPortal</key>
-			<string>D2BBC094B28449D4BC0EDD01</string>
-			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>97CC34BFBAB84CFB84BA22D8</string>
-			<key>remoteInfo</key>
-			<string>Pods-FontAwesome+iOS</string>
-		</dict>
-		<key>32A19018185C49529B9B1DA9</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>F8E2FE5163EE46939E8E155D</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>ARCHS</key>
-				<string>$(ARCHS_STANDARD_32_BIT)</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Pods-FontAwesome+iOS-prefix.pch</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_VERSION</key>
-				<string>com.apple.compilers.llvm.clang.1_0</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>6.0</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>38C7FC905C3A482F89E1C48F</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>97CC34BFBAB84CFB84BA22D8</string>
-			<key>targetProxy</key>
-			<string>3277946CE68044FF9141B760</string>
-		</dict>
-		<key>41708EC8572C459FB1D6BBCC</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>path</key>
-			<string>Pods-acknowledgements.markdown</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>45373AE35C8A4C6EBC266869</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>FA499A0894784B4CA7279396</string>
-				<string>E6515CD756574143B49602E8</string>
-				<string>21D02CD962594ED492196A69</string>
-				<string>4C0949CA78D7484EA70A8288</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>4AA530BE180C412DAA8662BC</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>9AC56229D7E04041B7F487C3</string>
-				<string>E3995BD7A1FC44BD98341648</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>4C0949CA78D7484EA70A8288</key>
-		<dict>
-			<key>fileRef</key>
-			<string>05D631F80DE84D2BBAD92904</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4C4A0FC22C554043B3464EBB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>FAImageView.h</string>
-			<key>path</key>
-			<string>FontAwesome+iOS/FAImageView.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>5529C6DC867D48AD9837DE1A</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>6101FB7D3EDC42DF9971405E</string>
-				<string>F0139EC689B74616BC575755</string>
-				<string>DA55CE2255914B818DF52B79</string>
-			</array>
-			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>557559FF54EE4CCDB9C9189D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>UIFont+FontAwesome.h</string>
-			<key>path</key>
-			<string>FontAwesome+iOS/UIFont+FontAwesome.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>6101FB7D3EDC42DF9971405E</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4C4A0FC22C554043B3464EBB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>66BEF2CBCA4E42BB9B84BE58</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>Pods-acknowledgements.plist</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>6863993DF7D24D4A8743979A</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>77FCB5EADB854B2D95C7D718</string>
-				<string>32A19018185C49529B9B1DA9</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>6E5C48B61E5C4B4892033FAC</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>73FA622B86DA4FEAADDB8214</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>192E9E9A1F5F459EA5AA6C38</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>779C9243E87E47F79961A5B3</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods.xcconfig</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>77E9C6D04E7641319B539D6F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7827BA1EF7F941778B8D45B2</string>
-				<string>258304025C5F44DDADE0E735</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Targets Support Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>77FCB5EADB854B2D95C7D718</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>F8E2FE5163EE46939E8E155D</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>ARCHS</key>
-				<string>$(ARCHS_STANDARD_32_BIT)</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Pods-FontAwesome+iOS-prefix.pch</string>
-				<key>GCC_VERSION</key>
-				<string>com.apple.compilers.llvm.clang.1_0</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>6.0</string>
-				<key>OTHER_CFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_CPLUSPLUSFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>7827BA1EF7F941778B8D45B2</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>A0CAC50BBDC24375804C6053</string>
-				<string>F8E2FE5163EE46939E8E155D</string>
-				<string>B9054C5B11944A12A2C656E3</string>
-				<string>05D631F80DE84D2BBAD92904</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods-FontAwesome+iOS</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>82F8E8B1EB4B4BD1B3C3668D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>NSString+FontAwesome.h</string>
-			<key>path</key>
-			<string>FontAwesome+iOS/NSString+FontAwesome.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>84C9F658AA134E3F9F48A21A</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>2F36F17B3FBB46268BE43CA3</string>
-				<string>2F15731896644F308377CB4E</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>FontAwesome+iOS</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>8D4F9ECECF3F45898476A9E1</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>0E3299AFE65C4B2D95E7BD6F</string>
-				<string>F9F27758C35D4349AFD8ECF4</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>97CC34BFBAB84CFB84BA22D8</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>6863993DF7D24D4A8743979A</string>
-			<key>buildPhases</key>
-			<array>
-				<string>45373AE35C8A4C6EBC266869</string>
-				<string>73FA622B86DA4FEAADDB8214</string>
-				<string>5529C6DC867D48AD9837DE1A</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-FontAwesome+iOS</string>
-			<key>productName</key>
-			<string>Pods-FontAwesome+iOS</string>
-			<key>productReference</key>
-			<string>B7920AD44A42467986F87C57</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>9AC56229D7E04041B7F487C3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B84C77766F0C47C787325453</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>A0CAC50BBDC24375804C6053</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-FontAwesome+iOS.xcconfig</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>A218A69ABFD94A5AA11827FA</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>NSString+FontAwesome.m</string>
-			<key>path</key>
-			<string>FontAwesome+iOS/NSString+FontAwesome.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>B219CECC007048CA85EFD6D6</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
-			<key>path</key>
-			<string>Pods-resources.sh</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>B7920AD44A42467986F87C57</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-FontAwesome+iOS.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>B84C77766F0C47C787325453</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>B9054C5B11944A12A2C656E3</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-FontAwesome+iOS-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>BC4BEC7DF7D54894B75ECBF7</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>0545D7391C13474A8B6EE4E0</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>C8371B0C3AF2404E93F6E074</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>name</key>
-			<string>UIFont+FontAwesome.m</string>
-			<key>path</key>
-			<string>FontAwesome+iOS/UIFont+FontAwesome.m</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>CBB4C2B5B47F4A6480178EAB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-environment.h</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>CEE30302C66845368AB5A168</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>779C9243E87E47F79961A5B3</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>ARCHS</key>
-				<string>$(ARCHS_STANDARD_32_BIT)</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_VERSION</key>
-				<string>com.apple.compilers.llvm.clang.1_0</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>6.0</string>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>D2BBC094B28449D4BC0EDD01</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastUpgradeCheck</key>
-				<string>0450</string>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>8D4F9ECECF3F45898476A9E1</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-			</array>
-			<key>mainGroup</key>
-			<string>24CD545C8CE34F0FBCFAECB9</string>
-			<key>productRefGroup</key>
-			<string>1EE2590EB7124A8F88D3A918</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>97CC34BFBAB84CFB84BA22D8</string>
-				<string>0F2215476B504BE9ACA31F8F</string>
-			</array>
-		</dict>
-		<key>D49BD911DD3648328FEAD02D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>FontAwesome.ttf</string>
-			<key>path</key>
-			<string>FontAwesome+iOS/Resources/FontAwesome.ttf</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>DA55CE2255914B818DF52B79</key>
-		<dict>
-			<key>fileRef</key>
-			<string>557559FF54EE4CCDB9C9189D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E3995BD7A1FC44BD98341648</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B7920AD44A42467986F87C57</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>E6515CD756574143B49602E8</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A218A69ABFD94A5AA11827FA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc -DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>E87EF5A2DA01402EB79BA769</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>CoreGraphics.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreGraphics.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>F0139EC689B74616BC575755</key>
-		<dict>
-			<key>fileRef</key>
-			<string>82F8E8B1EB4B4BD1B3C3668D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F5F1095E1D804B00BDF12967</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>28DEEEF7DFA24F76AEE9CC5A</string>
-				<string>CEE30302C66845368AB5A168</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>F8E2FE5163EE46939E8E155D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-FontAwesome+iOS-Private.xcconfig</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>F9F27758C35D4349AFD8ECF4</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>6.0</string>
-				<key>STRIP_INSTALLED_PRODUCT</key>
-				<string>NO</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>FA499A0894784B4CA7279396</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1018CA4E12C74138A04EBA53</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>COMPILER_FLAGS</key>
-				<string>-fobjc-arc -DOS_OBJECT_USE_OBJC=0</string>
-			</dict>
-		</dict>
-		<key>FDC6CDDCA8934DAEAB95C3DC</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>UIKit.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/UIKit.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>D2BBC094B28449D4BC0EDD01</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0545D7391C13474A8B6EE4E0 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 08FAC8C73A4544ABB3A3D1A2 /* Pods-dummy.m */; };
+		192E9E9A1F5F459EA5AA6C38 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B84C77766F0C47C787325453 /* Foundation.framework */; };
+		21D02CD962594ED492196A69 /* UIFont+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = C8371B0C3AF2404E93F6E074 /* UIFont+FontAwesome.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		4C0949CA78D7484EA70A8288 /* Pods-FontAwesome+iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 05D631F80DE84D2BBAD92904 /* Pods-FontAwesome+iOS-dummy.m */; };
+		6101FB7D3EDC42DF9971405E /* FAImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C4A0FC22C554043B3464EBB /* FAImageView.h */; };
+		9AC56229D7E04041B7F487C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B84C77766F0C47C787325453 /* Foundation.framework */; };
+		DA55CE2255914B818DF52B79 /* UIFont+FontAwesome.h in Headers */ = {isa = PBXBuildFile; fileRef = 557559FF54EE4CCDB9C9189D /* UIFont+FontAwesome.h */; };
+		E3995BD7A1FC44BD98341648 /* libPods-FontAwesome+iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B7920AD44A42467986F87C57 /* libPods-FontAwesome+iOS.a */; };
+		E6515CD756574143B49602E8 /* NSString+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = A218A69ABFD94A5AA11827FA /* NSString+FontAwesome.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+		F0139EC689B74616BC575755 /* NSString+FontAwesome.h in Headers */ = {isa = PBXBuildFile; fileRef = 82F8E8B1EB4B4BD1B3C3668D /* NSString+FontAwesome.h */; };
+		FA499A0894784B4CA7279396 /* FAImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1018CA4E12C74138A04EBA53 /* FAImageView.m */; settings = {COMPILER_FLAGS = "-fobjc-arc -DOS_OBJECT_USE_OBJC=0"; }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3277946CE68044FF9141B760 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D2BBC094B28449D4BC0EDD01 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 97CC34BFBAB84CFB84BA22D8;
+			remoteInfo = "Pods-FontAwesome+iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		05D631F80DE84D2BBAD92904 /* Pods-FontAwesome+iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FontAwesome+iOS-dummy.m"; sourceTree = SOURCE_ROOT; };
+		08FAC8C73A4544ABB3A3D1A2 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = SOURCE_ROOT; };
+		1018CA4E12C74138A04EBA53 /* FAImageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FAImageView.m; path = "FontAwesome+iOS/FAImageView.m"; sourceTree = SOURCE_ROOT; };
+		1EDC2ACB7F16422B8392A9E9 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		41708EC8572C459FB1D6BBCC /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = SOURCE_ROOT; };
+		4C4A0FC22C554043B3464EBB /* FAImageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FAImageView.h; path = "FontAwesome+iOS/FAImageView.h"; sourceTree = SOURCE_ROOT; };
+		557559FF54EE4CCDB9C9189D /* UIFont+FontAwesome.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIFont+FontAwesome.h"; path = "FontAwesome+iOS/UIFont+FontAwesome.h"; sourceTree = SOURCE_ROOT; };
+		66BEF2CBCA4E42BB9B84BE58 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = SOURCE_ROOT; };
+		6E5C48B61E5C4B4892033FAC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		779C9243E87E47F79961A5B3 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		82F8E8B1EB4B4BD1B3C3668D /* NSString+FontAwesome.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+FontAwesome.h"; path = "FontAwesome+iOS/NSString+FontAwesome.h"; sourceTree = SOURCE_ROOT; };
+		A0CAC50BBDC24375804C6053 /* Pods-FontAwesome+iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FontAwesome+iOS.xcconfig"; sourceTree = SOURCE_ROOT; };
+		A218A69ABFD94A5AA11827FA /* NSString+FontAwesome.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+FontAwesome.m"; path = "FontAwesome+iOS/NSString+FontAwesome.m"; sourceTree = SOURCE_ROOT; };
+		B219CECC007048CA85EFD6D6 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = SOURCE_ROOT; };
+		B7920AD44A42467986F87C57 /* libPods-FontAwesome+iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FontAwesome+iOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B84C77766F0C47C787325453 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		B9054C5B11944A12A2C656E3 /* Pods-FontAwesome+iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FontAwesome+iOS-prefix.pch"; sourceTree = SOURCE_ROOT; };
+		C8371B0C3AF2404E93F6E074 /* UIFont+FontAwesome.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIFont+FontAwesome.m"; path = "FontAwesome+iOS/UIFont+FontAwesome.m"; sourceTree = SOURCE_ROOT; };
+		CBB4C2B5B47F4A6480178EAB /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = SOURCE_ROOT; };
+		D49BD911DD3648328FEAD02D /* FontAwesome.ttf */ = {isa = PBXFileReference; includeInIndex = 1; name = FontAwesome.ttf; path = "FontAwesome+iOS/Resources/FontAwesome.ttf"; sourceTree = SOURCE_ROOT; };
+		E87EF5A2DA01402EB79BA769 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		F8E2FE5163EE46939E8E155D /* Pods-FontAwesome+iOS-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FontAwesome+iOS-Private.xcconfig"; sourceTree = SOURCE_ROOT; };
+		FDC6CDDCA8934DAEAB95C3DC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4AA530BE180C412DAA8662BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9AC56229D7E04041B7F487C3 /* Foundation.framework in Frameworks */,
+				E3995BD7A1FC44BD98341648 /* libPods-FontAwesome+iOS.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		73FA622B86DA4FEAADDB8214 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				192E9E9A1F5F459EA5AA6C38 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		08A032F3569149F89CF1FC9A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E87EF5A2DA01402EB79BA769 /* CoreGraphics.framework */,
+				B84C77766F0C47C787325453 /* Foundation.framework */,
+				FDC6CDDCA8934DAEAB95C3DC /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1D7E5A4FD52348A9ACCEA37F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				84C9F658AA134E3F9F48A21A /* FontAwesome+iOS */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		1EE2590EB7124A8F88D3A918 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B7920AD44A42467986F87C57 /* libPods-FontAwesome+iOS.a */,
+				6E5C48B61E5C4B4892033FAC /* libPods.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		24CD545C8CE34F0FBCFAECB9 = {
+			isa = PBXGroup;
+			children = (
+				08A032F3569149F89CF1FC9A /* Frameworks */,
+				1D7E5A4FD52348A9ACCEA37F /* Pods */,
+				1EE2590EB7124A8F88D3A918 /* Products */,
+				77E9C6D04E7641319B539D6F /* Targets Support Files */,
+				1EDC2ACB7F16422B8392A9E9 /* Podfile */,
+			);
+			sourceTree = "<group>";
+		};
+		258304025C5F44DDADE0E735 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				779C9243E87E47F79961A5B3 /* Pods.xcconfig */,
+				CBB4C2B5B47F4A6480178EAB /* Pods-environment.h */,
+				B219CECC007048CA85EFD6D6 /* Pods-resources.sh */,
+				66BEF2CBCA4E42BB9B84BE58 /* Pods-acknowledgements.plist */,
+				41708EC8572C459FB1D6BBCC /* Pods-acknowledgements.markdown */,
+				08FAC8C73A4544ABB3A3D1A2 /* Pods-dummy.m */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		2F15731896644F308377CB4E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D49BD911DD3648328FEAD02D /* FontAwesome.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		2F36F17B3FBB46268BE43CA3 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				4C4A0FC22C554043B3464EBB /* FAImageView.h */,
+				1018CA4E12C74138A04EBA53 /* FAImageView.m */,
+				82F8E8B1EB4B4BD1B3C3668D /* NSString+FontAwesome.h */,
+				A218A69ABFD94A5AA11827FA /* NSString+FontAwesome.m */,
+				557559FF54EE4CCDB9C9189D /* UIFont+FontAwesome.h */,
+				C8371B0C3AF2404E93F6E074 /* UIFont+FontAwesome.m */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		77E9C6D04E7641319B539D6F /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7827BA1EF7F941778B8D45B2 /* Pods-FontAwesome+iOS */,
+				258304025C5F44DDADE0E735 /* Pods */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7827BA1EF7F941778B8D45B2 /* Pods-FontAwesome+iOS */ = {
+			isa = PBXGroup;
+			children = (
+				A0CAC50BBDC24375804C6053 /* Pods-FontAwesome+iOS.xcconfig */,
+				F8E2FE5163EE46939E8E155D /* Pods-FontAwesome+iOS-Private.xcconfig */,
+				B9054C5B11944A12A2C656E3 /* Pods-FontAwesome+iOS-prefix.pch */,
+				05D631F80DE84D2BBAD92904 /* Pods-FontAwesome+iOS-dummy.m */,
+			);
+			name = "Pods-FontAwesome+iOS";
+			sourceTree = "<group>";
+		};
+		84C9F658AA134E3F9F48A21A /* FontAwesome+iOS */ = {
+			isa = PBXGroup;
+			children = (
+				2F36F17B3FBB46268BE43CA3 /* Source Files */,
+				2F15731896644F308377CB4E /* Resources */,
+			);
+			name = "FontAwesome+iOS";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		5529C6DC867D48AD9837DE1A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6101FB7D3EDC42DF9971405E /* FAImageView.h in Headers */,
+				F0139EC689B74616BC575755 /* NSString+FontAwesome.h in Headers */,
+				DA55CE2255914B818DF52B79 /* UIFont+FontAwesome.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0F2215476B504BE9ACA31F8F /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5F1095E1D804B00BDF12967 /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				BC4BEC7DF7D54894B75ECBF7 /* Sources */,
+				4AA530BE180C412DAA8662BC /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				38C7FC905C3A482F89E1C48F /* PBXTargetDependency */,
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = 6E5C48B61E5C4B4892033FAC /* libPods.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		97CC34BFBAB84CFB84BA22D8 /* Pods-FontAwesome+iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6863993DF7D24D4A8743979A /* Build configuration list for PBXNativeTarget "Pods-FontAwesome+iOS" */;
+			buildPhases = (
+				45373AE35C8A4C6EBC266869 /* Sources */,
+				73FA622B86DA4FEAADDB8214 /* Frameworks */,
+				5529C6DC867D48AD9837DE1A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-FontAwesome+iOS";
+			productName = "Pods-FontAwesome+iOS";
+			productReference = B7920AD44A42467986F87C57 /* libPods-FontAwesome+iOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D2BBC094B28449D4BC0EDD01 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+			};
+			buildConfigurationList = 8D4F9ECECF3F45898476A9E1 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 24CD545C8CE34F0FBCFAECB9;
+			productRefGroup = 1EE2590EB7124A8F88D3A918 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+			);
+			projectRoot = "";
+			targets = (
+				97CC34BFBAB84CFB84BA22D8 /* Pods-FontAwesome+iOS */,
+				0F2215476B504BE9ACA31F8F /* Pods */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		45373AE35C8A4C6EBC266869 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA499A0894784B4CA7279396 /* FAImageView.m in Sources */,
+				E6515CD756574143B49602E8 /* NSString+FontAwesome.m in Sources */,
+				21D02CD962594ED492196A69 /* UIFont+FontAwesome.m in Sources */,
+				4C0949CA78D7484EA70A8288 /* Pods-FontAwesome+iOS-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC4BEC7DF7D54894B75ECBF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0545D7391C13474A8B6EE4E0 /* Pods-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		38C7FC905C3A482F89E1C48F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 97CC34BFBAB84CFB84BA22D8 /* Pods-FontAwesome+iOS */;
+			targetProxy = 3277946CE68044FF9141B760 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0E3299AFE65C4B2D95E7BD6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+			};
+			name = Release;
+		};
+		28DEEEF7DFA24F76AEE9CC5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 779C9243E87E47F79961A5B3 /* Pods.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		32A19018185C49529B9B1DA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8E2FE5163EE46939E8E155D /* Pods-FontAwesome+iOS-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pods-FontAwesome+iOS-prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		77FCB5EADB854B2D95C7D718 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F8E2FE5163EE46939E8E155D /* Pods-FontAwesome+iOS-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Pods-FontAwesome+iOS-prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNS_BLOCK_ASSERTIONS=1",
+					"$(inherited)",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CEE30302C66845368AB5A168 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 779C9243E87E47F79961A5B3 /* Pods.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				DSTROOT = /tmp/xcodeproj.dst;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INSTALL_PATH = "$(BUILT_PRODUCTS_DIR)";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F9F27758C35D4349AFD8ECF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6863993DF7D24D4A8743979A /* Build configuration list for PBXNativeTarget "Pods-FontAwesome+iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77FCB5EADB854B2D95C7D718 /* Release */,
+				32A19018185C49529B9B1DA9 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8D4F9ECECF3F45898476A9E1 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0E3299AFE65C4B2D95E7BD6F /* Release */,
+				F9F27758C35D4349AFD8ECF4 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5F1095E1D804B00BDF12967 /* Build configuration list for PBXNativeTarget "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28DEEEF7DFA24F76AEE9CC5A /* Release */,
+				CEE30302C66845368AB5A168 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D2BBC094B28449D4BC0EDD01 /* Project object */;
+}
