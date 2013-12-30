@@ -98,9 +98,9 @@ static char separationKey;
         }
         
         //Setting attributes
-        NSDictionary *textAttributes=[self textAttributes][@(state)];
+        NSMutableDictionary *textAttributes=[[self textAttributes][@(state)] mutableCopy];
         if(!textAttributes)
-            textAttributes=[self textAttributes][@(UIControlStateNormal)];
+            textAttributes=[[self textAttributes][@(UIControlStateNormal)] mutableCopy];
         if(textAttributes){
             //Setting attributes to text
             [mutableStringText setAttributes:textAttributes range:NSMakeRange(0, [[self buttonText] length])];
@@ -114,6 +114,27 @@ static char separationKey;
                 }else{
                     iconAttributes[NSFontAttributeName]=[UIFont fontWithName:@"fontawesome" size:textFont.pointSize];
                 }
+                //Calculating offset
+                CGFloat textHeight = [[self buttonText] sizeWithAttributes:textAttributes].height;
+                CGFloat iconHeight = 0.0f;
+                if([self buttonIconString]){
+                    iconHeight = [[self buttonIconString]sizeWithAttributes:iconAttributes].height;
+                }
+                else if([self buttonIcon]){
+                    iconHeight = [[NSString fontAwesomeIconStringForIconIdentifier:[self buttonIcon]] sizeWithAttributes:iconAttributes].height;
+
+                }
+                if(iconHeight>textHeight){
+                    textAttributes[NSBaselineOffsetAttributeName]=@((iconHeight-textHeight)/4);
+                    [mutableStringText setAttributes:textAttributes range:NSMakeRange(0, [[self buttonText] length])];
+                    iconAttributes[NSBaselineOffsetAttributeName]=@(0);
+
+                }else{
+                    textAttributes[NSBaselineOffsetAttributeName]=@(0);
+                    [mutableStringText setAttributes:textAttributes range:NSMakeRange(0, [[self buttonText] length])];
+                    iconAttributes[NSBaselineOffsetAttributeName]=@((textHeight-iconHeight)/4);
+                }
+                
                 [mutableStringIcon setAttributes:iconAttributes range:NSMakeRange(0, [mutableStringIcon length])];
             }
         }

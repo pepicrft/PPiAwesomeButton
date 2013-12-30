@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>7E6BA423-8214-4CBF-80BB-259997DB0819</string>
+	<string>603A91C7-6282-493C-B7F6-588EBD3CEB69</string>
 	<key>IDESourceControlProjectName</key>
 	<string>PPiAwesomeButton-Demo</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>ED743FB7-997A-462C-8A24-F06EF57DA0AC</key>
-		<string>https://github.com/pepibumur/PPiAwesomeButton</string>
+		<key>C03186A7-74DB-4B17-8DE2-F329E1DC9D80</key>
+		<string>ssh://github.com/pepibumur/PPiAwesomeButton.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>PPiAwesomeButton-Demo/PPiAwesomeButton-Demo.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>ED743FB7-997A-462C-8A24-F06EF57DA0AC</key>
+		<key>C03186A7-74DB-4B17-8DE2-F329E1DC9D80</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/pepibumur/PPiAwesomeButton</string>
+	<string>ssh://github.com/pepibumur/PPiAwesomeButton.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>ED743FB7-997A-462C-8A24-F06EF57DA0AC</string>
+	<string>C03186A7-74DB-4B17-8DE2-F329E1DC9D80</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>ED743FB7-997A-462C-8A24-F06EF57DA0AC</string>
+			<string>C03186A7-74DB-4B17-8DE2-F329E1DC9D80</string>
 			<key>IDESourceControlWCCName</key>
 			<string>PPiAwesomeButton</string>
 		</dict>
