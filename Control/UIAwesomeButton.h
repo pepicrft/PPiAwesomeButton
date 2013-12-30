@@ -7,7 +7,26 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "NSString+FontAwesome.h"
+#import "UIButton+PPiAwesome.h"
 @interface UIAwesomeButton : UIView
+
+@property (nonatomic) IconPosition iconPosition;
+@property (nonatomic,strong) NSDictionary *textAttributes;
+
+// Initializers
++(UIAwesomeButton*)buttonWithType:(UIButtonType)type text:(NSString*)text icon:(NSString*)icon textAttributes:(NSDictionary*)attributes andIconPosition:(IconPosition)position;
+-(id)initWithFrame:(CGRect)frame text:(NSString*)text icon:(NSString*)icon textAttributes:(NSDictionary*)attributes andIconPosition:(IconPosition)position;
+
+// Setters
+-(void)setButtonText:(NSString *)buttonText;
+-(void)setIcon:(NSString *)icon;
+-(void)setAttributes:(NSDictionary*)attributes forUIControlState:(UIControlState)state;
+-(void)setBackgroundColor:(UIColor*)color forUIControlState:(UIControlState)state;
+-(void)setRadius:(CGFloat)radius;
+-(void)setControlState:(UIControlState)controlState;
+-(void)setSeparation:(CGFloat)separation;
+-(void)setTextAlignment:(NSTextAlignment)alignment;
+-(void)setHorizontalMargin:(CGFloat)margin;
 
 @end
