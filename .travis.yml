@@ -1,14 +1,11 @@
 language: objective-c
+xcode_sdk: iphonesimulator
+rvm: 1.9.3
 
 before_install:
-  - brew update
-  - brew install xctool
+  - cd PPiAwesomeButton-Demo
+  - gem install --no-rdoc --no-ri cocoapods -v 0.28
+  - gem install --no-rdoc --no-ri pr-changelog mechanize json mcbean xcpretty
 
-branches:
-  only:
-    - develop
-
-notifications:
-  email: false
-
-script: xctool ONLY_ACTIVE_ARCH=NO -workspace PPiAwesomeButton-Demo/PPiAwesomeButton-Demo.xcworkspace -scheme PPiAwesomeButton-Demo build test -sdk iphonesimulator
+script:
+  - xctool -workspace PPiAwesomeButton-Demo.xcworkspace -scheme PPiAwesomeButton-Demo build -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO

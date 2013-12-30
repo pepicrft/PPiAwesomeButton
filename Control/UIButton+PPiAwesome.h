@@ -10,12 +10,14 @@
 #import "NSString+FontAwesome.h"
 #import <QuartzCore/QuartzCore.h>
 #import <objc/runtime.h>
+
 typedef enum {
     IconPositionRight,
     IconPositionLeft,
 } IconPosition;
 
 @interface UIButton (PPiAwesome)
+
 +(UIButton*)buttonWithType:(UIButtonType)type text:(NSString*)text icon:(NSString*)icon textAttributes:(NSDictionary*)attributes andIconPosition:(IconPosition)position;
 -(id)initWithFrame:(CGRect)frame text:(NSString*)text icon:(NSString*)icon textAttributes:(NSDictionary*)attributes andIconPosition:(IconPosition)position;
 -(id)initWithFrame:(CGRect)frame text:(NSString*)text iconString:(NSString*)iconString textAttributes:(NSDictionary*)attributes andIconPosition:(IconPosition)position;

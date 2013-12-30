@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "UIButton+PPiAwesome.h"
+#import "UIAwesomeButton.h"
 @interface ViewController ()
 
 @end
@@ -96,21 +97,17 @@
     [pinterest3 setSeparation:10];
     [self.view addSubview:pinterest3];
     
-    
-    //Watchers button
-    
-    UIButton* watchersButton = [UIButton buttonWithType:UIButtonTypeCustom text:@"999" icon:@"icon-unlock" textAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:32],NSForegroundColorAttributeName:[UIColor whiteColor]} andIconPosition:IconPositionLeft];
-    [watchersButton setContentHorizontalAlignment:UIControlContentHorizontalAlignmentCenter];
-    [watchersButton setBackgroundColor:[UIColor colorWithRed:205.0f/255 green:35.0f/255 blue:44.0f/255 alpha:1.0] forUIControlState:UIControlStateNormal];
-    [watchersButton setBackgroundColor:[UIColor colorWithRed:244.0f/255 green:61.0f/255 blue:91.0f/255 alpha:1.0] forUIControlState:UIControlStateHighlighted];
-    [watchersButton setRadius:4];
-    [watchersButton setButtonText:[NSString stringWithFormat:@"Prueba"]];
-
-    [watchersButton addTarget:self action:@selector(buttonAction) forControlEvents:UIControlEventTouchUpInside];
-    CGSize buttonSize = watchersButton.titleLabel.attributedText.size;
-    [self.view addSubview:watchersButton];
-    watchersButton.frame=CGRectMake(10, 390,buttonSize.width+20, buttonSize.height);
-
+    UIAwesomeButton *button4 = [[UIAwesomeButton alloc] initWithFrame:CGRectMake(10, 400, 280, 50) text:@"Test" icon:nil textAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15],NSForegroundColorAttributeName:[UIColor whiteColor],@"IconFont":[UIFont fontWithName:@"fontawesome" size:40]} andIconPosition:IconPositionLeft];
+    [button4 setBackgroundColor:[UIColor colorWithRed:205.0f/255 green:35.0f/255 blue:44.0f/255 alpha:1.0] forUIControlState:UIControlStateNormal];
+    [button4 setBackgroundColor:[UIColor colorWithRed:244.0f/255 green:61.0f/255 blue:91.0f/255 alpha:1.0] forUIControlState:UIControlStateHighlighted];
+    [button4 setRadius:3.0];
+    [button4 setIcon:@"icon-pinterest"];
+    [button4 setSeparation:10];
+    [button4 setActionBlock:^{
+        NSLog(@"Working!");
+    }];
+    [button4 setTextAlignment:NSTextAlignmentCenter];
+    [self.view addSubview:button4];
 }
 
 - (void)didReceiveMemoryWarning

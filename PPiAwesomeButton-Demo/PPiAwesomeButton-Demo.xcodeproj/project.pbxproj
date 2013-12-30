@@ -21,6 +21,8 @@
 		3D16EB8E17C2118200B5964F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D16EB8D17C2118200B5964F /* ViewController.m */; };
 		3D16EB9717C211E000B5964F /* UIButton+PPiAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D16EB9617C211E000B5964F /* UIButton+PPiAwesome.m */; };
 		3D16EB9917C2140B00B5964F /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D16EB9817C2140B00B5964F /* fontawesome-webfont.ttf */; };
+		3D2A85151871C14F00192598 /* UIView+AutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A85141871C14F00192598 /* UIView+AutoLayout.m */; };
+		3D89506D1871682100F6C289 /* UIAwesomeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D89506C1871682100F6C289 /* UIAwesomeButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,10 @@
 		3D16EB9517C211E000B5964F /* UIButton+PPiAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+PPiAwesome.h"; sourceTree = "<group>"; };
 		3D16EB9617C211E000B5964F /* UIButton+PPiAwesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+PPiAwesome.m"; sourceTree = "<group>"; };
 		3D16EB9817C2140B00B5964F /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "fontawesome-webfont.ttf"; sourceTree = "<group>"; };
+		3D2A85131871C14F00192598 /* UIView+AutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+AutoLayout.h"; sourceTree = "<group>"; };
+		3D2A85141871C14F00192598 /* UIView+AutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AutoLayout.m"; sourceTree = "<group>"; };
+		3D89506B1871682100F6C289 /* UIAwesomeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIAwesomeButton.h; sourceTree = "<group>"; };
+		3D89506C1871682100F6C289 /* UIAwesomeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIAwesomeButton.m; sourceTree = "<group>"; };
 		FB3AD941C9E0499280781259 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -122,9 +128,13 @@
 		3D16EB9417C211A800B5964F /* Control */ = {
 			isa = PBXGroup;
 			children = (
+				3D2A85131871C14F00192598 /* UIView+AutoLayout.h */,
+				3D2A85141871C14F00192598 /* UIView+AutoLayout.m */,
 				3D16EB9817C2140B00B5964F /* fontawesome-webfont.ttf */,
 				3D16EB9517C211E000B5964F /* UIButton+PPiAwesome.h */,
 				3D16EB9617C211E000B5964F /* UIButton+PPiAwesome.m */,
+				3D89506B1871682100F6C289 /* UIAwesomeButton.h */,
+				3D89506C1871682100F6C289 /* UIAwesomeButton.m */,
 			);
 			name = Control;
 			path = ../../Control;
@@ -237,6 +247,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3D89506D1871682100F6C289 /* UIAwesomeButton.m in Sources */,
+				3D2A85151871C14F00192598 /* UIView+AutoLayout.m in Sources */,
 				3D16EB7E17C2118200B5964F /* main.m in Sources */,
 				3D16EB8217C2118200B5964F /* AppDelegate.m in Sources */,
 				3D16EB8E17C2118200B5964F /* ViewController.m in Sources */,
