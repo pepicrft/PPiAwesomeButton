@@ -3,8 +3,10 @@ xcode_sdk: iphonesimulator
 rvm: 1.9.3
 
 before_install:
+  - cd PPiAwesomeButton-Demo
   - gem install --no-rdoc --no-ri cocoapods -v 0.28
   - gem install --no-rdoc --no-ri pr-changelog mechanize json mcbean xcpretty
 
 script:
-  - xctool -workspace PPiAwesomeButton-Demo/PPiAwesomeButton-Demo.xcworkspace -scheme PPiAwesomeButton-Demo build -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+  - cd PPiAwesomeButton-Demo
+  - xctool -workspace PPiAwesomeButton-Demo.xcworkspace -scheme PPiAwesomeButton-Demo build -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
