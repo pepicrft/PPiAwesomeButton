@@ -7,4 +7,4 @@ before_install:
   - gem install --no-rdoc --no-ri pr-changelog mechanize json mcbean xcpretty
 
 script:
-  - xctool -workspace PPiAwesomeButton-Demo/PPiAwesomeButton-Demo.xcworkspace -scheme PPiAwesomeButton-Demo build-tests -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+  - xctool -workspace PPiAwesomeButton-Demo/PPiAwesomeButton-Demo.xcworkspace -scheme PPiAwesomeButton-Demo build -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
