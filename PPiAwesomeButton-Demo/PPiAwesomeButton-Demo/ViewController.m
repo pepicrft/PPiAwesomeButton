@@ -106,7 +106,7 @@
     [button4 setActionBlock:^{
         NSLog(@"Working!");
     }];
-    [button4 setTextAlignment:NSTextAlignmentLeft];
+    [button4 setTextAlignment:NSTextAlignmentCenter];
     [self.view addSubview:button4];
 }
 
