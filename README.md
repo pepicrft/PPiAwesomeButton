@@ -73,6 +73,9 @@ UIAwesomeButton *button4 = [[UIAwesomeButton alloc] initWithFrame:CGRectMake(10,
     [button4 setRadius:3.0];
     [button4 setSeparation:10];
     [button4 setTextAlignment:NSTextAlignmentLeft];
+    [button4 setActionBlock:^{
+        NSLog(@"Working!");
+    }];
     [self.view addSubview:button4];
 ```
 ## Screenshot
