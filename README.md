@@ -63,7 +63,18 @@ UIButton *facetime1=[UIButton buttonWithType:UIButtonTypeCustom text:@"Facetime"
     [self.view addSubview:facetime1];
 ```
 ![image](http://img266.imageshack.us/img266/3530/4wb.png)
+### --- Extra - UIAwesomeButton ---
+If you've detected some misalignments in icon and text I've created a new class called **UIAwesomeButton** (_UIView subclass_) that has the same behaviour an UIButton has but implemented from zero ( and without misalignments between elements ). Here's an example of implementation into your project:
 
+```objective-c
+UIAwesomeButton *button4 = [[UIAwesomeButton alloc] initWithFrame:CGRectMake(10, 400, 280, 50) text:@"Test" icon:nil textAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15],NSForegroundColorAttributeName:[UIColor whiteColor],@"IconFont":[UIFont fontWithName:@"fontawesome" size:40]} andIconPosition:IconPositionLeft];
+    [button4 setBackgroundColor:[UIColor colorWithRed:205.0f/255 green:35.0f/255 blue:44.0f/255 alpha:1.0] forUIControlState:UIControlStateNormal];
+    [button4 setBackgroundColor:[UIColor colorWithRed:244.0f/255 green:61.0f/255 blue:91.0f/255 alpha:1.0] forUIControlState:UIControlStateHighlighted];
+    [button4 setRadius:3.0];
+    [button4 setSeparation:10];
+    [button4 setTextAlignment:NSTextAlignmentLeft];
+    [self.view addSubview:button4];
+```
 ## Screenshot
 ![image](http://img189.imageshack.us/img189/3955/07yh.gif)
 
