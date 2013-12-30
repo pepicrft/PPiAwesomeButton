@@ -170,6 +170,11 @@
 			attributes = {
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = PPinera;
+				TargetAttributes = {
+					3D16EB6D17C2118200B5964F = {
+						DevelopmentTeam = U6LC622NKF;
+					};
+				};
 			};
 			buildConfigurationList = 3D16EB6917C2118200B5964F /* Build configuration list for PBXProject "PPiAwesomeButton-Demo" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -333,10 +338,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FB3AD941C9E0499280781259 /* Pods.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PPiAwesomeButton-Demo/PPiAwesomeButton-Demo-Prefix.pch";
 				INFOPLIST_FILE = "PPiAwesomeButton-Demo/PPiAwesomeButton-Demo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -345,10 +353,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = FB3AD941C9E0499280781259 /* Pods.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "PPiAwesomeButton-Demo/PPiAwesomeButton-Demo-Prefix.pch";
 				INFOPLIST_FILE = "PPiAwesomeButton-Demo/PPiAwesomeButton-Demo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

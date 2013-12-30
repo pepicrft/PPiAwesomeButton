@@ -81,7 +81,7 @@
     [pinterest1 setRadius:0.0];
     [self.view addSubview:pinterest1];
     
-    UIButton *pinterest2=[UIButton buttonWithType:UIButtonTypeCustom text:@"Pin it!" icon:@"icon-pinterest" textAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:32],NSForegroundColorAttributeName:[UIColor whiteColor]} andIconPosition:IconPositionLeft];
+    UIButton *pinterest2=[UIButton buttonWithType:UIButtonTypeCustom text:@"Pin it!" icon:@"icon-pinterest" textAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:32],NSForegroundColorAttributeName:[UIColor whiteColor],@"IconFont":[UIFont fontWithName:@"fontawesome" size:20]} andIconPosition:IconPositionLeft];
     [pinterest2 setBackgroundColor:[UIColor colorWithRed:205.0f/255 green:35.0f/255 blue:44.0f/255 alpha:1.0] forUIControlState:UIControlStateNormal];
     [pinterest2 setBackgroundColor:[UIColor colorWithRed:244.0f/255 green:61.0f/255 blue:91.0f/255 alpha:1.0] forUIControlState:UIControlStateHighlighted];
 
@@ -113,7 +113,7 @@
     // Dispose of any resources that can be recreated.
 }
 -(void)buttonAction{
-    
+    NSLog(@"Press button");
 }
 
 @end
