@@ -9,10 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "NSString+FontAwesome.h"
 #import "UIButton+PPiAwesome.h"
+
+typedef void (^block)();
 @interface UIAwesomeButton : UIView
 
 @property (nonatomic) IconPosition iconPosition;
 @property (nonatomic,strong) NSDictionary *textAttributes;
+@property (nonatomic,copy)void (^actionBlock)();
 
 // Initializers
 +(UIAwesomeButton*)buttonWithType:(UIButtonType)type text:(NSString*)text icon:(NSString*)icon textAttributes:(NSDictionary*)attributes andIconPosition:(IconPosition)position;
@@ -28,5 +31,5 @@
 -(void)setSeparation:(CGFloat)separation;
 -(void)setTextAlignment:(NSTextAlignment)alignment;
 -(void)setHorizontalMargin:(CGFloat)margin;
-
+;
 @end

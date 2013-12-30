@@ -108,6 +108,9 @@
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
 	[super touchesBegan:touches withEvent:event];
     [self setControlState:UIControlStateHighlighted];
+    if(self.actionBlock){
+        self.actionBlock();
+    }
 }
 
 - (void) touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {

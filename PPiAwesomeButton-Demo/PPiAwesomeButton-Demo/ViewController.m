@@ -103,6 +103,9 @@
     [button4 setRadius:3.0];
     [button4 setIcon:@"icon-pinterest"];
     [button4 setSeparation:10];
+    [button4 setActionBlock:^{
+        NSLog(@"Working!");
+    }];
     [button4 setTextAlignment:NSTextAlignmentLeft];
     [self.view addSubview:button4];
 }
