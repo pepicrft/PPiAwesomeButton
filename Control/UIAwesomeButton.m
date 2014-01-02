@@ -93,13 +93,15 @@
     // Setting the constraints
     if(self.buttonText){
         [self.textLabel setAttributedText:[[NSAttributedString alloc] initWithString:self.buttonText attributes:[self textAttributesForState:self.controlState]]];
+        [self.textLabel setBackgroundColor:[UIColor clearColor]];
     }else{
         [self.textLabel setText:@""];
     }
     if(self.icon){
         [self.iconLabel setAttributedText:[[NSAttributedString alloc] initWithString:[NSString fontAwesomeIconStringForIconIdentifier:self.icon] attributes:[self iconAttributesForState:self.controlState]]];
+        [self.iconLabel setBackgroundColor:[UIColor clearColor]];
     }else{
-        [self.textLabel setText:@""];
+        [self.iconLabel setText:@""];
     }
 }
 #pragma mark -
@@ -108,9 +110,6 @@
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
 	[super touchesBegan:touches withEvent:event];
     [self setControlState:UIControlStateHighlighted];
-    if(self.actionBlock){
-        self.actionBlock();
-    }
 }
 
 - (void) touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -122,6 +121,9 @@
     [super touchesEnded:touches withEvent:event];
     //if([self isAwesome])
     [self setControlState:UIControlStateNormal];
+    if(self.actionBlock){
+        self.actionBlock();
+    }
 }
 
 
