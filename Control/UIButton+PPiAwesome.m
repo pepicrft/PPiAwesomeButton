@@ -121,7 +121,7 @@ static char separationKey;
                     iconHeight = [[self buttonIconString] sizeWithFont:iconAttributes[NSFontAttributeName]].height;
                 }
                 else if([self buttonIcon]){
-                    iconHeight = [[NSString fontAwesomeIconStringForIconIdentifier:[self buttonIcon]] sizeWithFont:[NSFontAttributeName]].height;
+                    iconHeight = [[NSString fontAwesomeIconStringForIconIdentifier:[self buttonIcon]] sizeWithFont:iconAttributes[NSFontAttributeName]].height;
 
                 }
                 if(iconHeight>textHeight){
