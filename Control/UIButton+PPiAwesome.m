@@ -115,13 +115,13 @@ static char separationKey;
                     iconAttributes[NSFontAttributeName]=[UIFont fontWithName:@"fontawesome" size:textFont.pointSize];
                 }
                 //Calculating offset
-                CGFloat textHeight = [[self buttonText] sizeWithAttributes:textAttributes].height;
+                CGFloat textHeight = [[self buttonText] sizeWithFont:textAttributes[NSFontAttributeName]].height;
                 CGFloat iconHeight = 0.0f;
                 if([self buttonIconString]){
-                    iconHeight = [[self buttonIconString]sizeWithAttributes:iconAttributes].height;
+                    iconHeight = [[self buttonIconString] sizeWithFont:iconAttributes[NSFontAttributeName]].height;
                 }
                 else if([self buttonIcon]){
-                    iconHeight = [[NSString fontAwesomeIconStringForIconIdentifier:[self buttonIcon]] sizeWithAttributes:iconAttributes].height;
+                    iconHeight = [[NSString fontAwesomeIconStringForIconIdentifier:[self buttonIcon]] sizeWithFont:iconAttributes[NSFontAttributeName]].height;
 
                 }
                 if(iconHeight>textHeight){
