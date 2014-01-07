@@ -36,27 +36,6 @@
 
 #pragma mark Factory & Initializer Methods
 
-/** 
- Creates and returns a new view that does not convert the autoresizing mask into constraints.
- */
-+ (instancetype)newAutoLayoutView
-{
-    UIView *view = [self new];
-    view.translatesAutoresizingMaskIntoConstraints = NO;
-    return view;
-}
-
-/**
- Initializes and returns a new view that does not convert the autoresizing mask into constraints.
- */
-- (instancetype)initForAutoLayout
-{
-    self = [self init];
-    if (self) {
-        self.translatesAutoresizingMaskIntoConstraints = NO;
-    }
-    return self;
-}
 
 #pragma mark Auto Layout Convenience Methods
 
@@ -86,112 +65,6 @@ static UILayoutPriority _globalConstraintPriority = UILayoutPriorityRequired;
         block();
     }
     _globalConstraintPriority = UILayoutPriorityRequired;
-}
-
-/**
- Removes the given constraint from the view it has been added to.
- 
- @param constraint The constraint to remove.
- */
-+ (void)autoRemoveConstraint:(NSLayoutConstraint *)constraint
-{
-    if (constraint.secondItem) {
-        UIView *commonSuperview = [constraint.firstItem al_commonSuperviewWithView:constraint.secondItem];
-        while (commonSuperview) {
-            if ([commonSuperview.constraints containsObject:constraint]) {
-                [commonSuperview removeConstraint:constraint];
-                return;
-            }
-            commonSuperview = commonSuperview.superview;
-        }
-    }
-    else {
-        [constraint.firstItem removeConstraint:constraint];
-        return;
-    }
-    NSAssert(nil, @"Failed to remove constraint: %@", constraint);
-}
-
-/**
- Removes the given constraints from the views they have been added to.
- 
- @param constraints The constraints to remove.
- */
-+ (void)autoRemoveConstraints:(NSArray *)constraints
-{
-    for (id object in constraints) {
-        if ([object isKindOfClass:[NSLayoutConstraint class]]) {
-            [self autoRemoveConstraint:((NSLayoutConstraint *)object)];
-        } else {
-            NSAssert(nil, @"All constraints to remove must be instances of NSLayoutConstraint.");
-        }
-    }
-}
-
-/**
- Removes all explicit constraints that affect the view.
- WARNING: Apple's constraint solver is not optimized for large-scale constraint changes; you may encounter major performance issues after using this method.
-          It is not recommended to use this method to "reset" a view for reuse in a different way with new constraints. Create a new view instead.
- NOTE: This method preserves implicit constraints, such as intrinsic content size constraints, which you usually do not want to remove.
- */
-- (void)autoRemoveConstraintsAffectingView
-{
-    [self autoRemoveConstraintsAffectingViewIncludingImplicitConstraints:NO];
-}
-
-/**
- Removes all constraints that affect the view, optionally including implicit constraints.
- WARNING: Apple's constraint solver is not optimized for large-scale constraint changes; you may encounter major performance issues after using this method.
-          It is not recommended to use this method to "reset" a view for reuse in a different way with new constraints. Create a new view instead.
- NOTE: Implicit constraints are auto-generated lower priority constraints (such as those that attempt to keep a view at
- its intrinsic content size by hugging its content & resisting compression), and you usually do not want to remove these.
- 
- @param shouldRemoveImplicitConstraints Whether implicit constraints should be removed or skipped.
- */
-- (void)autoRemoveConstraintsAffectingViewIncludingImplicitConstraints:(BOOL)shouldRemoveImplicitConstraints
-{
-    NSMutableArray *constraintsToRemove = [NSMutableArray new];
-    UIView *startView = self;
-    do {
-        for (NSLayoutConstraint *constraint in startView.constraints) {
-            BOOL isImplicitConstraint = [NSStringFromClass([constraint class]) isEqualToString:@"NSContentSizeLayoutConstraint"];
-            if (shouldRemoveImplicitConstraints || !isImplicitConstraint) {
-                if (constraint.firstItem == self || constraint.secondItem == self) {
-                    [constraintsToRemove addObject:constraint];
-                }
-            }
-        }
-        startView = startView.superview;
-    } while (startView);
-    [UIView autoRemoveConstraints:constraintsToRemove];
-}
-
-/**
- Recursively removes all explicit constraints that affect the view and its subviews.
- WARNING: Apple's constraint solver is not optimized for large-scale constraint changes; you may encounter major performance issues after using this method.
-          It is not recommended to use this method to "reset" views for reuse in a different way with new constraints. Create a new view instead.
- NOTE: This method preserves implicit constraints, such as intrinsic content size constraints, which you usually do not want to remove.
- */
-- (void)autoRemoveConstraintsAffectingViewAndSubviews
-{
-    [self autoRemoveConstraintsAffectingViewAndSubviewsIncludingImplicitConstraints:NO];
-}
-
-/** 
- Recursively removes all constraints that affect the view and its subviews, optionally including implicit constraints.
- WARNING: Apple's constraint solver is not optimized for large-scale constraint changes; you may encounter major performance issues after using this method.
-          It is not recommended to use this method to "reset" views for reuse in a different way with new constraints. Create a new view instead.
- NOTE: Implicit constraints are auto-generated lower priority constraints (such as those that attempt to keep a view at
- its intrinsic content size by hugging its content & resisting compression), and you usually do not want to remove these.
- 
- @param shouldRemoveImplicitConstraints Whether implicit constraints should be removed or skipped.
- */
-- (void)autoRemoveConstraintsAffectingViewAndSubviewsIncludingImplicitConstraints:(BOOL)shouldRemoveImplicitConstraints
-{
-    [self autoRemoveConstraintsAffectingViewIncludingImplicitConstraints:shouldRemoveImplicitConstraints];
-    for (UIView *subview in self.subviews) {
-        [subview autoRemoveConstraintsAffectingViewAndSubviewsIncludingImplicitConstraints:shouldRemoveImplicitConstraints];
-    }
 }
 
 /**
@@ -550,45 +423,6 @@ static UILayoutPriority _globalConstraintPriority = UILayoutPriorityRequired;
     return constraint;
 }
 
-/**
- Pins the top edge of the view to the top layout guide of the given view controller with an inset.
- For compatibility with iOS 6 (where layout guides do not exist), this method will simply pin the top edge of
- the view to the top edge of the given view controller's view with an inset.
- 
- @param viewController The view controller whose topLayoutGuide should be used to pin to.
- @param inset The amount to inset this view's top edge from the layout guide.
- @return The constraint added.
- */
-- (NSLayoutConstraint *)autoPinToTopLayoutGuideOfViewController:(UIViewController *)viewController withInset:(CGFloat)inset
-{
-    if (floor(NSFoundationVersionNumber) <= 993.00) {
-        return [self autoPinEdge:ALEdgeTop toEdge:ALEdgeTop ofView:viewController.view withOffset:inset];
-    } else {
-        NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:viewController.topLayoutGuide attribute:NSLayoutAttributeBottom multiplier:1.0f constant:inset];
-        [viewController.view al_addConstraintUsingGlobalPriority:constraint];
-        return constraint;
-    }
-}
-
-/**
- Pins the bottom edge of the view to the bottom layout guide of the given view controller with an inset.
- For compatibility with iOS 6 (where layout guides do not exist), this method will simply pin the bottom edge of
- the view to the bottom edge of the given view controller's view with an inset.
- 
- @param viewController The view controller whose bottomLayoutGuide should be used to pin to.
- @param inset The amount to inset this view's bottom edge from the layout guide.
- @return The constraint added.
- */
-- (NSLayoutConstraint *)autoPinToBottomLayoutGuideOfViewController:(UIViewController *)viewController withInset:(CGFloat)inset
-{
-    if (floor(NSFoundationVersionNumber) <= 993.00) {
-        return [self autoPinEdge:ALEdgeBottom toEdge:ALEdgeBottom ofView:viewController.view withOffset:-inset];
-    } else {
-        NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:self attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:viewController.bottomLayoutGuide attribute:NSLayoutAttributeTop multiplier:1.0f constant:-inset];
-        [viewController.view al_addConstraintUsingGlobalPriority:constraint];
-        return constraint;
-    }
-}
 
 
 #pragma mark Internal Helper Methods
@@ -770,108 +604,6 @@ static UILayoutPriority _globalConstraintPriority = UILayoutPriorityRequired;
 
 @implementation NSArray (AutoLayout)
 
-/**
- Aligns views in this array to one another along a given edge.
- Note: This array must contain at least 2 views, and all views must share a common superview.
- 
- @param edge The edge to which the subviews will be aligned.
- @return An array of constraints added.
- */
-- (NSArray *)autoAlignViewsToEdge:(ALEdge)edge
-{
-    NSAssert([self al_containsMinimumNumberOfViews:2], @"This array must contain at least 2 views.");
-    NSMutableArray *constraints = [NSMutableArray new];
-    UIView *previousView = nil;
-    for (id object in self) {
-        if ([object isKindOfClass:[UIView class]]) {
-            UIView *view = (UIView *)object;
-            if (previousView) {
-                [constraints addObject:[view autoPinEdge:edge toEdge:edge ofView:previousView]];
-            }
-            previousView = view;
-        }
-    }
-    return constraints;
-}
-
-/**
- Aligns views in this array to one another along a given axis.
- Note: This array must contain at least 2 views, and all views must share a common superview.
- 
- @param axis The axis to which to subviews will be aligned.
- @return An array of constraints added.
- */
-- (NSArray *)autoAlignViewsToAxis:(ALAxis)axis
-{
-    NSAssert([self al_containsMinimumNumberOfViews:2], @"This array must contain at least 2 views.");
-    NSMutableArray *constraints = [NSMutableArray new];
-    UIView *previousView = nil;
-    for (id object in self) {
-        if ([object isKindOfClass:[UIView class]]) {
-            UIView *view = (UIView *)object;
-            if (previousView) {
-                [constraints addObject:[view autoAlignAxis:axis toSameAxisOfView:previousView]];
-            }
-            previousView = view;
-        }
-    }
-    return constraints;
-}
-
-/**
- Matches a given dimension of all the views in this array.
- Note: This array must contain at least 2 views, and all views must share a common superview.
- 
- @param dimension The dimension to match for all of the subviews.
- @return An array of constraints added.
- */
-- (NSArray *)autoMatchViewsDimension:(ALDimension)dimension
-{
-    NSAssert([self al_containsMinimumNumberOfViews:2], @"This array must contain at least 2 views.");
-    NSMutableArray *constraints = [NSMutableArray new];
-    UIView *previousView = nil;
-    for (id object in self) {
-        if ([object isKindOfClass:[UIView class]]) {
-            UIView *view = (UIView *)object;
-            if (previousView) {
-                [constraints addObject:[view autoMatchDimension:dimension toDimension:dimension ofView:previousView]];
-            }
-            previousView = view;
-        }
-    }
-    return constraints;
-}
-
-/**
- Sets the given dimension of all the views in this array to a given size.
- Note: This array must contain at least 1 view.
- 
- @param dimension The dimension of each of the subviews to set.
- @param size The size to set the given dimension of each subview to.
- @return An array of constraints added.
- */
-- (NSArray *)autoSetViewsDimension:(ALDimension)dimension toSize:(CGFloat)size
-{
-    NSAssert([self al_containsMinimumNumberOfViews:1], @"This array must contain at least 1 view.");
-    NSMutableArray *constraints = [NSMutableArray new];
-    for (id object in self) {
-        if ([object isKindOfClass:[UIView class]]) {
-            UIView *view = (UIView *)object;
-            [constraints addObject:[view autoSetDimension:dimension toSize:size]];
-        }
-    }
-    return constraints;
-}
-
-/**
- Distributes the views in this array equally along the selected axis.
- Views will be the same size (variable) in the dimension along the axis and will have spacing (fixed) between them.
- 
- @param axis The axis along which to distribute the subviews.
- @param spacing The fixed amount of spacing between each subview.
- @param alignment The way in which the subviews will be aligned.
- @return An array of constraints added.
- */
 - (NSArray *)autoDistributeViewsAlongAxis:(ALAxis)axis withFixedSpacing:(CGFloat)spacing alignment:(NSLayoutFormatOptions)alignment
 {
     NSAssert([self al_containsMinimumNumberOfViews:2], @"This array must contain at least 2 views to distribute.");
@@ -912,58 +644,6 @@ static UILayoutPriority _globalConstraintPriority = UILayoutPriorityRequired;
     }
     if (previousView) {
         [constraints addObject:[previousView autoPinEdgeToSuperviewEdge:lastEdge withInset:spacing]];
-    }
-    return constraints;
-}
-
-/**
- Distributes the views in this array equally along the selected axis.
- Views will be the same size (fixed) in the dimension along the axis and will have spacing (variable) between them.
- 
- @param axis The axis along which to distribute the subviews.
- @param size The fixed size of each subview in the dimension along the given axis.
- @param alignment The way in which the subviews will be aligned.
- @return An array of constraints added.
- */
-- (NSArray *)autoDistributeViewsAlongAxis:(ALAxis)axis withFixedSize:(CGFloat)size alignment:(NSLayoutFormatOptions)alignment
-{
-    NSAssert([self al_containsMinimumNumberOfViews:2], @"This array must contain at least 2 views to distribute.");
-    ALDimension fixedDimension;
-    NSLayoutAttribute attribute;
-    switch (axis) {
-        case ALAxisHorizontal:
-        case ALAxisBaseline:
-            fixedDimension = ALDimensionWidth;
-            attribute = NSLayoutAttributeCenterX;
-            break;
-        case ALAxisVertical:
-            fixedDimension = ALDimensionHeight;
-            attribute = NSLayoutAttributeCenterY;
-            break;
-        default:
-            NSAssert(nil, @"Not a valid axis.");
-            return nil;
-    }
-    BOOL isRightToLeftLanguage = [NSLocale characterDirectionForLanguage:[[NSBundle mainBundle] preferredLocalizations][0]] == NSLocaleLanguageDirectionRightToLeft;
-    BOOL shouldFlipOrder = isRightToLeftLanguage && (axis != ALAxisVertical); // imitate the effect of leading/trailing when distributing horizontally
-    
-    NSMutableArray *constraints = [NSMutableArray new];
-    NSArray *views = [self al_copyViewsOnly];
-    NSInteger numberOfViews = [views count];
-    UIView *commonSuperview = [views al_commonSuperviewOfViews];
-    UIView *previousView = nil;
-    for (NSInteger i = 0; i < numberOfViews; i++) {
-        UIView *view = shouldFlipOrder ? views[numberOfViews - i - 1] : views[i];
-        [constraints addObject:[view autoSetDimension:fixedDimension toSize:size]];
-        CGFloat multiplier = (i * 2.0f + 2.0f) / (numberOfViews + 1.0f);
-        CGFloat constant = (multiplier - 1.0f) * size / 2.0f;
-        NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:view attribute:attribute relatedBy:NSLayoutRelationEqual toItem:commonSuperview attribute:attribute multiplier:multiplier constant:constant];
-        [commonSuperview al_addConstraintUsingGlobalPriority:constraint];
-        [constraints addObject:constraint];
-        if (previousView) {
-            [constraints addObject:[view al_alignToView:previousView withOption:alignment forAxis:axis]];
-        }
-        previousView = view;
     }
     return constraints;
 }
@@ -1029,21 +709,6 @@ static UILayoutPriority _globalConstraintPriority = UILayoutPriorityRequired;
         }
     }
     return viewsOnlyArray;
-}
-
-@end
-
-
-#pragma mark - NSLayoutConstraint+AutoLayout
-
-@implementation NSLayoutConstraint (AutoLayout)
-
-/**
- Removes the constraint from the view it has been added to.
- */
-- (void)autoRemove
-{
-    [UIView autoRemoveConstraint:self];
 }
 
 @end
