@@ -253,4 +253,14 @@ static char separationKey;
 - (BOOL) isAwesome {
     return objc_getAssociatedObject(self, &isAwesomeKey)?YES:NO;
 }
+
+// override enabled
+-(void)setEnabled:(BOOL)enabled {
+    [super setEnabled:enabled];
+    if (enabled) {
+        [self updateButtonFormatForUIControlState:UIControlStateNormal];
+    } else {
+        [self updateButtonFormatForUIControlState:UIControlStateDisabled];
+    }
+}
 @end

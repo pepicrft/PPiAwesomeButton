@@ -32,4 +32,5 @@ typedef enum {
 -(void)setRadius:(CGFloat)radius;
 -(void)setSeparation:(NSUInteger)separation;
 -(void)setIsAwesome:(BOOL)isAwesome;
+-(void)setEnabled:(BOOL)enabled;
 @end
