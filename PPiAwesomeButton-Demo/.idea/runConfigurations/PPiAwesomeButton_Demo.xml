@@ -1,0 +1,8 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="PPiAwesomeButton-Demo" type="AppleRunConfiguration" factoryName="Application" SCHEME_NAME="PPiAwesomeButton-Demo" PROJECT_NAME="PPiAwesomeButton-Demo" TARGET_NAME="PPiAwesomeButton-Demo" CONFIG_NAME="Debug" WORKING_DIR="" PASS_PARENT_ENVS="FALSE" RUN_TARGET_PROJECT_NAME="PPiAwesomeButton-Demo" RUN_TARGET_NAME="PPiAwesomeButton-Demo" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+    <envs />
+    <RunnerSettings RunnerId="AppRunner" />
+    <ConfigurationWrapper RunnerId="AppRunner" />
+    <method />
+  </configuration>
+</component>

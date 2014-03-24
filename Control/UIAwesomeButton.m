@@ -12,23 +12,45 @@
 @property (nonatomic,strong) NSMutableDictionary *backgroundColors;
 @property (nonatomic,strong) NSMutableDictionary *attributes;
 @property (nonatomic,strong) UILabel *iconLabel, *textLabel;
+@property (nonatomic,strong) UIImageView *iconImageView;
 @property (nonatomic) UIControlState controlState;
 @property (nonatomic) CGFloat separation;
 @property (nonatomic,strong) NSString *buttonText;
 @property (nonatomic,strong) NSString *icon;
+@property (nonatomic,strong) UIImage *iconImage;
 @property (nonatomic) NSTextAlignment textAligment;
 @property (nonatomic,strong) NSNumber *horizontalmargin;
 @end
 
 @implementation UIAwesomeButton
-+(UIAwesomeButton*)buttonWithType:(UIButtonType)type text:(NSString*)text icon:(NSString*)icon textAttributes:(NSDictionary*)attributes andIconPosition:(IconPosition)position{
-    UIAwesomeButton *button =[[UIAwesomeButton alloc] initWithFrame:CGRectZero text:text icon:icon textAttributes:attributes andIconPosition:position];
++(UIAwesomeButton*)buttonWithType:(UIButtonType)type text:(NSString *)text iconImage:(UIImage *)icon attributes:(NSDictionary *)attributes andIconPosition:(IconPosition)position
+{
+    UIAwesomeButton *button = [[UIAwesomeButton alloc] initWithFrame:CGRectZero text:text iconImage:icon attributes:attributes andIconPosition:position];
     return button;
 }
--(id)initWithFrame:(CGRect)frame text:(NSString*)text icon:(NSString*)icon textAttributes:(NSDictionary*)attributes andIconPosition:(IconPosition)position{
+
++(UIAwesomeButton*)buttonWithType:(UIButtonType)type text:(NSString *)text icon:(NSString *)icon attributes:(NSDictionary *)attributes andIconPosition:(IconPosition)position
+{
+    UIAwesomeButton *button = [[UIAwesomeButton alloc] initWithFrame:CGRectZero text:text icon:icon attributes:attributes andIconPosition:position];
+    return button;
+}
+-(id)initWithFrame:(CGRect)frame text:(NSString *)text icon:(NSString *)icon attributes:(NSDictionary *)attributes andIconPosition:(IconPosition)position{
     self=[super initWithFrame:frame];
     if(self){
         [self setIcon:icon andButtonText:text];
+        [self setAttributes:attributes forUIControlState:UIControlStateNormal];
+        [self setIconPosition:position];
+        [self setTextAlignment:NSTextAlignmentCenter];
+        [self setControlState:UIControlStateNormal];
+    }
+    return self;
+}
+
+-(id)initWithFrame:(CGRect)frame text:(NSString *)text iconImage:(UIImage *)icon attributes:(NSDictionary *)attributes andIconPosition:(IconPosition)position
+{
+    self=[super initWithFrame:frame];
+    if(self){
+        [self setIconImage:icon andButtonText:text];
         [self setAttributes:attributes forUIControlState:UIControlStateNormal];
         [self setIconPosition:position];
         [self setTextAlignment:NSTextAlignmentCenter];
@@ -41,25 +63,35 @@
     // Removing from superView
     [self.textLabel removeFromSuperview];
     [self.iconLabel removeFromSuperview];
-    
+    [self.iconImageView removeFromSuperview];
+
     //Setting labels
-    [self updateLabelsText];
-    
+    [self updateSubviewsContent];
+
     // Horizontal layout
     [self addSubview:self.textLabel];
-    [self addSubview:self.iconLabel];
-    
+    if(self.icon)[self addSubview:self.iconLabel];
+    if(self.iconImage)[self addSubview:self.iconImageView];
+
+
     // Elements order ICON/TEXT
-    UIView *element1 = self.iconLabel;
+    UIView *iconElement = self.icon? self.iconLabel : self.iconImageView;
+    UIView *element1 = iconElement;
     UIView *element2 = self.textLabel;
     if(self.iconPosition == IconPositionRight){
         element1 = self.textLabel;
-        element2 = self.iconLabel;
+        element2 = iconElement;
     }
     float horizontalMargin = [[self horizontalmargin] floatValue];
     float margin  = self.frame.size.height*0.10;
-    [(UILabel*)element1 setTextAlignment:NSTextAlignmentLeft];
-    [(UILabel*)element2 setTextAlignment:NSTextAlignmentLeft];
+    if([element1 isKindOfClass:[UILabel class]])
+    {
+        [(UILabel*)element1 setTextAlignment:NSTextAlignmentLeft];
+    }
+    if([element2 isKindOfClass:[UILabel class]])
+    {
+        [(UILabel*)element2 setTextAlignment:NSTextAlignmentLeft];
+    }
     if(self.textAligment == NSTextAlignmentLeft){
         [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(horizontalMargin)-[element1]-separation-[element2]" options:NSLayoutFormatAlignAllCenterY metrics:@{@"separation":@(self.separation),@"horizontalMargin":@(horizontalMargin)} views:@{@"element1":element1,@"element2":element2}]];
     }
@@ -69,15 +101,30 @@
         NSArray *views = @[element1,element2];
         NSArray *constraints = [views autoDistributeViewsAlongAxis:ALAxisHorizontal withFixedSpacing:self.separation alignment:NSLayoutFormatAlignAllCenterY];
         [self addConstraints:constraints];
-        [(UILabel*)element1 setTextAlignment:NSTextAlignmentRight];
-        [(UILabel*)element2 setTextAlignment:NSTextAlignmentLeft];
+        if([element1 isKindOfClass:[UILabel class]])
+        {
+            [(UILabel*)element1 setTextAlignment:NSTextAlignmentRight];
+        }
+        else if([element1 isKindOfClass:[UIImageView class]])
+        {
+            [(UIImageView*)element1 setContentMode:UIViewContentModeRight];
+        }
+        if([element2 isKindOfClass:[UILabel class]])
+        {
+            [(UILabel*)element2 setTextAlignment:NSTextAlignmentLeft];
+        }
+        else if([element2 isKindOfClass:[UIImageView class]])
+        {
+            [(UIImageView*)element2 setContentMode:UIViewContentModeLeft];
+        }
     }
     // Vertical layout
-    if([[self subviews] containsObject:self.textLabel])
-        [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-margin-[iconLabel]-margin-|" options:NSLayoutFormatAlignAllCenterY metrics:@{@"margin":@(margin)} views:@{@"textLabel":self.textLabel,@"iconLabel":self.iconLabel}]];
     if([[self subviews] containsObject:self.iconLabel])
         [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-margin-[iconLabel]-margin-|" options:NSLayoutFormatAlignAllCenterY metrics:@{@"margin":@(margin)} views:@{@"textLabel":self.textLabel,@"iconLabel":self.iconLabel}]];
-    
+    if([[self subviews] containsObject:self.iconImageView]){
+        [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-margin-[iconLabel]-margin-|" options:NSLayoutFormatAlignAllCenterY metrics:@{@"margin":@(margin)} views:@{@"textLabel":self.textLabel,@"iconLabel":self.iconImageView}]];
+    }
+
     [self.iconLabel needsUpdateConstraints];
     [self.textLabel needsUpdateConstraints];
 }
@@ -85,11 +132,12 @@
 -(void)updateButtonFormat{
     // Setting background color
     [self setBackgroundColor:[self backgroundColorForState:self.controlState]];
-    
+
     //Setting labels
-    [self updateLabelsText];
+    [self updateSubviewsContent];
 }
--(void)updateLabelsText{
+-(void)updateSubviewsContent
+{
     // Setting the constraints
     if(self.buttonText){
         [self.textLabel setAttributedText:[[NSAttributedString alloc] initWithString:self.buttonText attributes:[self textAttributesForState:self.controlState]]];
@@ -103,6 +151,8 @@
     }else{
         [self.iconLabel setText:@""];
     }
+
+    [self.iconImageView setImage:self.iconImage];
 }
 #pragma mark -
 #pragma mark Touches
@@ -156,6 +206,18 @@
     return _iconLabel;
 }
 
+-(UIImageView*)iconImageView
+{
+    if(!_iconImageView){
+        _iconImageView = [UIImageView new];
+        [_iconImageView setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];
+        [_iconImageView setContentCompressionResistancePriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];
+        [_iconImageView setTranslatesAutoresizingMaskIntoConstraints:NO];
+        [_iconImageView setContentMode:UIViewContentModeCenter];
+    }
+    return _iconImageView;
+}
+
 #pragma mark - Custom getters
 -(NSDictionary*)iconAttributesForState:(UIControlState)state{
     NSMutableDictionary *iconAttributes = [[self textAttributesForState:state] mutableCopy];
@@ -174,7 +236,7 @@
 -(UIColor*)backgroundColorForState:(UIControlState)state{
     if(self.backgroundColors[@(state)]) return self.backgroundColors[@(state)];
     else return self.backgroundColors[@(UIControlStateNormal)];
-    
+
 }
 -(NSNumber*)horizontalmargin{
     if(!_horizontalmargin) _horizontalmargin = @(20);
@@ -216,6 +278,12 @@
     _icon = icon;
     [self updateButtonContent];
 }
+-(void)setIconImage:(UIImage *)iconImage andButtonText:(NSString*)text{
+    _buttonText = text;
+    _iconImage = iconImage;
+    _icon = nil;
+    [self updateButtonContent];
+}
 -(void)setButtonText:(NSString *)buttonText{
     _buttonText = buttonText;
     [self updateButtonContent];
@@ -223,11 +291,12 @@
 
 -(void)setIcon:(NSString *)icon{
     _icon = icon;
+    _iconImage = nil;
     [self updateButtonContent];
 }
 -(void)setIconPosition:(IconPosition)iconPosition{
     _iconPosition = iconPosition;
-    
+
 }
 
 @end

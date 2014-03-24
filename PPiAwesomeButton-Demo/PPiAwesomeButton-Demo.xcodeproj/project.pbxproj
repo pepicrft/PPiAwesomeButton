@@ -23,6 +23,8 @@
 		3D16EB9917C2140B00B5964F /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3D16EB9817C2140B00B5964F /* fontawesome-webfont.ttf */; };
 		3D2A85151871C14F00192598 /* UIView+AutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D2A85141871C14F00192598 /* UIView+AutoLayout.m */; };
 		3D89506D1871682100F6C289 /* UIAwesomeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D89506C1871682100F6C289 /* UIAwesomeButton.m */; };
+		B749E005B5567C6256962EB6 /* bell.png in Resources */ = {isa = PBXBuildFile; fileRef = B749E7A99E66C8BC308E4CDD /* bell.png */; };
+		B749E12FB680891387FFC6E3 /* bell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B749E62D9B2626674109ABF5 /* bell@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		3D2A85141871C14F00192598 /* UIView+AutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+AutoLayout.m"; sourceTree = "<group>"; };
 		3D89506B1871682100F6C289 /* UIAwesomeButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIAwesomeButton.h; sourceTree = "<group>"; };
 		3D89506C1871682100F6C289 /* UIAwesomeButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIAwesomeButton.m; sourceTree = "<group>"; };
+		B749E62D9B2626674109ABF5 /* bell@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "bell@2x.png"; sourceTree = "<group>"; };
+		B749E7A99E66C8BC308E4CDD /* bell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bell.png; sourceTree = "<group>"; };
 		FB3AD941C9E0499280781259 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -107,6 +111,7 @@
 				3D16EB8C17C2118200B5964F /* ViewController.h */,
 				3D16EB8D17C2118200B5964F /* ViewController.m */,
 				3D16EB7817C2118200B5964F /* Supporting Files */,
+				B749E3FBC26FFBBC3E0C9C6C /* Resources */,
 			);
 			path = "PPiAwesomeButton-Demo";
 			sourceTree = "<group>";
@@ -138,6 +143,15 @@
 			);
 			name = Control;
 			path = ../../Control;
+			sourceTree = "<group>";
+		};
+		B749E3FBC26FFBBC3E0C9C6C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B749E7A99E66C8BC308E4CDD /* bell.png */,
+				B749E62D9B2626674109ABF5 /* bell@2x.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +218,8 @@
 				3D16EB8817C2118200B5964F /* Default-568h@2x.png in Resources */,
 				3D16EB8B17C2118200B5964F /* MainStoryboard.storyboard in Resources */,
 				3D16EB9917C2140B00B5964F /* fontawesome-webfont.ttf in Resources */,
+				B749E005B5567C6256962EB6 /* bell.png in Resources */,
+				B749E12FB680891387FFC6E3 /* bell@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
