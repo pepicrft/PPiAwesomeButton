@@ -3,6 +3,14 @@ PPiAwesomeButton
 
 UIButton category with new methods to setup a button with text + FontAwesome Icon.
 
+### Updates
+##### 25-March-2014 - Cocoapods version - 1.3.7
+Added the possibility to set the icon in UIImage format. The way to do that is just using the methods:
+```objc
++(UIAwesomeButton*)buttonWithType:(UIButtonType)type text:(NSString *)text icon:(NSString *)icon attributes:(NSDictionary *)attributes andIconPosition:(IconPosition)position;
+-(id)initWithFrame:(CGRect)frame text:(NSString *)text iconImage:(UIImage *)icon attributes:(NSDictionary *)attributes andIconPosition:(IconPosition)position;
+```
+
 ## Features
 
 * Background color can be setup dependending on the UIButton State thanks to its new method: ```-(void)setBackgroundColor:(UIColor*)color forUIControlState:(UIControlState)state;```
