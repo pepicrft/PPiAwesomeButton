@@ -276,6 +276,7 @@
 -(void)setIcon:(NSString *)icon andButtonText:(NSString*)text{
     _buttonText = text;
     _icon = icon;
+    _iconImage = nil;
     [self updateButtonContent];
 }
 -(void)setIconImage:(UIImage *)iconImage andButtonText:(NSString*)text{
@@ -289,6 +290,11 @@
     [self updateButtonContent];
 }
 
+-(void)setIconImage:(UIImage *)icon{
+    _icon = nil;
+    _iconImage = icon;
+    [self updateButtonContent];
+}
 -(void)setIcon:(NSString *)icon{
     _icon = icon;
     _iconImage = nil;

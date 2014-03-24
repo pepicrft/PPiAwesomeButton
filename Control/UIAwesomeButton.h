@@ -26,6 +26,7 @@ typedef void (^block)();
 // Setters
 -(void)setButtonText:(NSString *)buttonText;
 -(void)setIcon:(NSString *)icon;
+-(void)setIconImage:(UIImage *)icon;
 -(void)setAttributes:(NSDictionary*)attributes forUIControlState:(UIControlState)state;
 -(void)setBackgroundColor:(UIColor*)color forUIControlState:(UIControlState)state;
 -(void)setRadius:(CGFloat)radius;
