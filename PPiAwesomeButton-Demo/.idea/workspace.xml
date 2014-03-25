@@ -23,46 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ViewController.h" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PPiAwesomeButton-Demo/ViewController.h">
+      <file leaf-file-name="main.m" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PPiAwesomeButton-Demo/main.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UIView+AutoLayout.h" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Control/UIView+AutoLayout.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="952">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UIButton+PPiAwesome.h" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Control/UIButton+PPiAwesome.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="89" selection-start="481" selection-end="520" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1630">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UIAwesomeButton.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Control/UIAwesomeButton.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="174" column="24" selection-start="7641" selection-end="7652" vertical-scroll-proportion="-96.88" vertical-offset="0" max-vertical-offset="5428">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UIAwesomeButton.h" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../Control/UIAwesomeButton.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="0" selection-start="1677" selection-end="1677" vertical-scroll-proportion="0.40270728" vertical-offset="0" max-vertical-offset="1658">
+            <state line="15" column="0" selection-start="257" selection-end="257" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="993">
               <folding />
             </state>
           </provider>
@@ -71,16 +35,34 @@
       <file leaf-file-name="ViewController.m" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PPiAwesomeButton-Demo/ViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="137" selection-start="4224" selection-end="4224" vertical-scroll-proportion="0.0" vertical-offset="854" max-vertical-offset="1750">
+            <state line="19" column="24" selection-start="360" selection-end="360" vertical-scroll-proportion="0.0" vertical-offset="140" max-vertical-offset="2450">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PPiAwesomeButton-Demo/main.m">
+      <file leaf-file-name="UIAwesomeButton.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Control/UIAwesomeButton.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="0" selection-start="257" selection-end="257" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="280">
+            <state line="21" column="81" selection-start="742" selection-end="742" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1273">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UIAwesomeButton.m" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../Control/UIAwesomeButton.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="118" column="62" selection-start="5204" selection-end="5204" vertical-scroll-proportion="0.7688312" vertical-offset="1046" max-vertical-offset="5404">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ViewController.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PPiAwesomeButton-Demo/ViewController.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="951">
               <folding />
             </state>
           </provider>
@@ -96,11 +78,11 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/PPiAwesomeButton-Demo/ViewController.m" />
         <option value="$PROJECT_DIR$/../Control/UIButton+PPiAwesome.m" />
         <option value="$PROJECT_DIR$/../Control/UIButton+PPiAwesome.h" />
-        <option value="$PROJECT_DIR$/../Control/UIAwesomeButton.m" />
         <option value="$PROJECT_DIR$/../Control/UIAwesomeButton.h" />
+        <option value="$PROJECT_DIR$/../Control/UIAwesomeButton.m" />
+        <option value="$PROJECT_DIR$/PPiAwesomeButton-Demo/ViewController.m" />
       </list>
     </option>
   </component>
@@ -227,12 +209,24 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.lastSelected" value="preferences.keymap" />
     <property name="recentsLimit" value="5" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/PPiAwesomeButton-Demo.xcworkspace" />
     <property name="OBJC.PRESERVED_TARGET_SELECTION" value="PPiAwesomeButton-Demo" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RunManager" selected="Application.PPiAwesomeButton-Demo">
     <configuration default="true" type="AppleRunConfiguration" factoryName="Application" PROJECT_NAME="PPiAwesomeButton-Demo" TARGET_NAME="PPiAwesomeButton-Demo" CONFIG_NAME="Debug" PASS_PARENT_ENVS="FALSE" RUN_TARGET_PROJECT_NAME="PPiAwesomeButton-Demo" RUN_TARGET_NAME="PPiAwesomeButton-Demo" MAKE_ACTIVE="TRUE" WAIT_FOR="FALSE">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="OCUnitRunConfiguration" factoryName="XCTest/Kiwi" PASS_PARENT_ENVS="FALSE" TEST_MODE="SUITE_TEST">
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="OCGoogleTestRunConfigurationType" factoryName="Google Test" PROJECT_NAME="PPiAwesomeButton-Demo" TARGET_NAME="PPiAwesomeButton-Demo" CONFIG_NAME="Debug" PASS_PARENT_ENVS="FALSE" TEST_MODE="SUITE_TEST">
       <envs />
       <method />
     </configuration>
@@ -251,6 +245,23 @@
     </list>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="sslv3">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="d0bef9b9-9f4c-41ac-a083-c8f0543d0d99" name="Default" comment="" />
@@ -263,6 +274,7 @@
     <frame x="0" y="22" width="2560" height="1330" extended-state="0" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32975206" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -270,13 +282,12 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32975206" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32975206" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32975206" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -294,6 +305,20 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/../Control/UIView+AutoLayout.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="952">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PPiAwesomeButton-Demo/ViewController.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/PPiAwesomeButton-Demo/ViewController.h">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="210">
@@ -336,20 +361,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PPiAwesomeButton-Demo/ViewController.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1350">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PPiAwesomeButton-Demo/ViewController.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="137" selection-start="4224" selection-end="4224" vertical-scroll-proportion="0.0" vertical-offset="868" max-vertical-offset="2450">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Control/UIButton+PPiAwesome.m">
       <provider selected="true" editor-type-id="text-editor">
         <state line="33" column="61" selection-start="965" selection-end="1121" vertical-scroll-proportion="0.35121328" vertical-offset="187" max-vertical-offset="4493">
@@ -364,13 +375,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PPiAwesomeButton-Demo/main.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="257" selection-end="257" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="993">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../Control/UIButton+PPiAwesome.h">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="89" selection-start="481" selection-end="520" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1630">
@@ -378,16 +382,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../Control/UIAwesomeButton.m">
+    <entry file="file://$PROJECT_DIR$/PPiAwesomeButton-Demo/ViewController.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="174" column="24" selection-start="7641" selection-end="7652" vertical-scroll-proportion="-96.88" vertical-offset="0" max-vertical-offset="5428">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1350">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PPiAwesomeButton-Demo/main.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="0" selection-start="257" selection-end="257" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="993">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../Control/UIAwesomeButton.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="0" selection-start="1677" selection-end="1677" vertical-scroll-proportion="0.40270728" vertical-offset="0" max-vertical-offset="1658">
+        <state line="21" column="81" selection-start="742" selection-end="742" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1672">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PPiAwesomeButton-Demo/ViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="24" selection-start="360" selection-end="360" vertical-scroll-proportion="0.0" vertical-offset="140" max-vertical-offset="2450">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Control/UIAwesomeButton.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="118" column="62" selection-start="5204" selection-end="5204" vertical-scroll-proportion="0.7688312" vertical-offset="1046" max-vertical-offset="5404">
           <folding />
         </state>
       </provider>
