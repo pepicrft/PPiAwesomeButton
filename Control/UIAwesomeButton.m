@@ -98,32 +98,41 @@
     else if (self.textAligment == NSTextAlignmentRight)
         [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[element1]-separation-[element2]-(horizontalMargin)-|" options:NSLayoutFormatAlignAllCenterY metrics:@{@"separation":@(self.separation),@"horizontalMargin":@(horizontalMargin)} views:@{@"element1":element1,@"element2":element2}]];
     else{
-        NSArray *views = @[element1,element2];
-        NSArray *constraints = [views autoDistributeViewsAlongAxis:ALAxisHorizontal withFixedSpacing:self.separation alignment:NSLayoutFormatAlignAllCenterY];
-        [self addConstraints:constraints];
+//        NSArray *views = @[element1,element2];
+//        NSArray *constraints = [views autoDistributeViewsAlongAxis:ALAxisHorizontal withFixedSpacing:self.separation alignment:NSLayoutFormatAlignAllCenterY];
+//        [self addConstraints:constraints];
+        CGFloat element1Width = 0;
+        CGFloat element2Width = 0;
         if([element1 isKindOfClass:[UILabel class]])
         {
             [(UILabel*)element1 setTextAlignment:NSTextAlignmentRight];
+           element1Width = [((UILabel*)element1).text sizeWithFont:((UILabel*)element1).font].width;
         }
         else if([element1 isKindOfClass:[UIImageView class]])
         {
             [(UIImageView*)element1 setContentMode:UIViewContentModeRight];
+            element1Width = [(UIImageView *) element1 image].size.width;
         }
         if([element2 isKindOfClass:[UILabel class]])
         {
             [(UILabel*)element2 setTextAlignment:NSTextAlignmentLeft];
+            element2Width = [((UILabel*)element2).text sizeWithFont:((UILabel*)element2).font].width;
+
         }
         else if([element2 isKindOfClass:[UIImageView class]])
         {
             [(UIImageView*)element2 setContentMode:UIViewContentModeLeft];
+            element2Width = [(UIImageView *) element2 image].size.width;
         }
+
+        CGFloat originX = (self.frame.size.width - (element1Width+self.separation+element2Width))/2;
+        [element1 setFrame:CGRectMake(originX, element1.frame.origin.y, element1Width, element1.frame.size.height)];
+        [element2 setFrame:CGRectMake(originX + element1Width + self.separation, element2.frame.origin.y, element2Width, element2.frame.size.height)];
     }
     // Vertical layout
-    if([[self subviews] containsObject:self.iconLabel])
-        [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-margin-[iconLabel]-margin-|" options:NSLayoutFormatAlignAllCenterY metrics:@{@"margin":@(margin)} views:@{@"textLabel":self.textLabel,@"iconLabel":self.iconLabel}]];
-    if([[self subviews] containsObject:self.iconImageView]){
-        [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-margin-[iconLabel]-margin-|" options:NSLayoutFormatAlignAllCenterY metrics:@{@"margin":@(margin)} views:@{@"textLabel":self.textLabel,@"iconLabel":self.iconImageView}]];
-    }
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-margin-[item]-margin-|" options:NSLayoutFormatAlignAllCenterY metrics:@{@"margin":@(margin)} views:@{@"item":element1}]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-margin-[item]-margin-|" options:NSLayoutFormatAlignAllCenterY metrics:@{@"margin":@(margin)} views:@{@"item":element2}]];
+
 
     [self.iconLabel needsUpdateConstraints];
     [self.textLabel needsUpdateConstraints];
