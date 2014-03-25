@@ -82,26 +82,12 @@
         element1 = self.textLabel;
         element2 = iconElement;
     }
-    float horizontalMargin = [[self horizontalmargin] floatValue];
-    float margin  = self.frame.size.height*0.10;
-    if([element1 isKindOfClass:[UILabel class]])
-    {
-        [(UILabel*)element1 setTextAlignment:NSTextAlignmentLeft];
-    }
-    if([element2 isKindOfClass:[UILabel class]])
-    {
-        [(UILabel*)element2 setTextAlignment:NSTextAlignmentLeft];
-    }
-    if(self.textAligment == NSTextAlignmentLeft){
-        [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-(horizontalMargin)-[element1]-separation-[element2]" options:NSLayoutFormatAlignAllCenterY metrics:@{@"separation":@(self.separation),@"horizontalMargin":@(horizontalMargin)} views:@{@"element1":element1,@"element2":element2}]];
-    }
-    else if (self.textAligment == NSTextAlignmentRight)
-        [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[element1]-separation-[element2]-(horizontalMargin)-|" options:NSLayoutFormatAlignAllCenterY metrics:@{@"separation":@(self.separation),@"horizontalMargin":@(horizontalMargin)} views:@{@"element1":element1,@"element2":element2}]];
-    else{
-        [self ditributeHorizontally:element1 element2:element2];
 
-    }
+    //Horizontal layout
+    [self centerHorizontally:element1 element2:element2];
+
     // Vertical layout
+    float margin  = self.frame.size.height*0.10;
     [self centerVertically:element1 element2:element2 margin:margin];
 
 
@@ -110,15 +96,27 @@
 }
 
 
-- (void)centerVertically:(UIView *)element1 element2:(UIView *)element2 margin:(float)margin
+- (void)centerHorizontally:(UIView *)element1 element2:(UIView *)element2
 {
-    if ([element1 isKindOfClass:[UILabel class]] || ([element1 isKindOfClass:[UIImageView class]] && self.iconImage)){
-        [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-margin-[item]-margin-|" options:NSLayoutFormatAlignAllCenterY metrics:@{@"margin":@(margin)} views:@{@"item":element1}]];
+    //Set aligment of subviews
+    float horizontalMargin = [[self horizontalmargin] floatValue];
+    if([element1 isKindOfClass:[UILabel class]])
+    {
+        [(UILabel*)element1 setTextAlignment:NSTextAlignmentLeft];
+    }
+    if([element2 isKindOfClass:[UILabel class]])
+    {
+        [(UILabel*)element2 setTextAlignment:NSTextAlignmentLeft];
     }
 
-    if ([element2 isKindOfClass:[UILabel class]] || ([element2 isKindOfClass:[UIImageView class]] && self.iconImage)){
-        [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-margin-[item]-margin-|" options:NSLayoutFormatAlignAllCenterY metrics:@{@"margin":@(margin)} views:@{@"item":element2}]];
-    }
+    [self ditributeHorizontally:element1 element2:element2];
+}
+
+
+- (void)centerVertically:(UIView *)element1 element2:(UIView *)element2 margin:(float)margin
+{
+    [element1 setFrame:CGRectMake(element1.frame.origin.x, element1.frame.origin.y, element1.frame.size.width, self.frame.size.height)];
+    [element2 setFrame:CGRectMake(element2.frame.origin.x, element2.frame.origin.y, element2.frame.size.width, self.frame.size.height)];
 }
 
 
@@ -148,9 +146,19 @@
             element2Width = [(UIImageView *) element2 image].size.width;
         }
 
-    CGFloat originX = (self.frame.size.width - (element1Width+ self.separation +element2Width))/2;
-    [element1 setFrame:CGRectMake(originX, element1.frame.origin.y, element1Width, element1.frame.size.height)];
-    [element2 setFrame:CGRectMake(originX + element1Width + self.separation, element2.frame.origin.y, element2Width, element2.frame.size.height)];
+    if(self.textAligment == NSTextAlignmentCenter){
+        CGFloat originX = (self.frame.size.width - (element1Width+ self.separation +element2Width))/2;
+        [element1 setFrame:CGRectMake(originX, element1.frame.origin.y, element1Width, element1.frame.size.height)];
+        [element2 setFrame:CGRectMake(originX + element1Width + self.separation, element2.frame.origin.y, element2Width, element2.frame.size.height)];
+    }
+    else if (self.textAligment == NSTextAlignmentLeft){
+        [element1 setFrame:CGRectMake(self.horizontalmargin.intValue, element1.frame.origin.y, element1Width, element1.frame.size.height)];
+        [element2 setFrame:CGRectMake(self.horizontalmargin.intValue + element1Width + self.separation, element2.frame.origin.y, element2Width, element2.frame.size.height)];
+    }
+    else if (self.textAligment == NSTextAlignmentRight){
+        [element1 setFrame:CGRectMake(self.frame.size.width-self.horizontalmargin.intValue-element2Width-self.separation-element1Width, element1.frame.origin.y, element1Width, element1.frame.size.height)];
+        [element2 setFrame:CGRectMake(element1.frame.origin.x + element1Width + self.separation, element2.frame.origin.y, element2Width, element2.frame.size.height)];
+    }
 }
 
 
@@ -264,7 +272,7 @@
 
 }
 -(NSNumber*)horizontalmargin{
-    if(!_horizontalmargin) _horizontalmargin = @(20);
+    if(!_horizontalmargin) _horizontalmargin = @(5);
     return _horizontalmargin;
 }
 #pragma  mark - Setters
@@ -328,6 +336,42 @@
 -(void)setIconPosition:(IconPosition)iconPosition{
     _iconPosition = iconPosition;
 
+}
+
+#pragma mark - Getters
+-(NSString*)getButtonText
+{
+    return _buttonText;
+}
+
+-(NSString*)getIcon
+{
+    return _icon;
+}
+
+-(UIImage*)getIconImage
+{
+    return _iconImage;
+}
+
+-(CGFloat)getRadius
+{
+    return self.layer.cornerRadius;
+}
+
+-(CGFloat)getSeparation
+{
+    return _separation;
+}
+
+-(NSTextAlignment)getTextAlignment
+{
+    return _textAligment;
+}
+
+-(CGFloat)getHorizontalMargin
+{
+    return _horizontalmargin.intValue;
 }
 
 @end

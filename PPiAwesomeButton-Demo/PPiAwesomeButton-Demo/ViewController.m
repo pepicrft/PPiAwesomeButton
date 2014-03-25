@@ -98,15 +98,15 @@
     [self.view addSubview:pinterest3];
 
 
-    UIAwesomeButton *button4 = [[UIAwesomeButton alloc] initWithFrame:CGRectMake(10, 400, 280, 50) text:@"Testinggggg" iconImage:[UIImage imageNamed:@"bell"] attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:15], NSForegroundColorAttributeName : [UIColor whiteColor], @"IconFont" : [UIFont fontWithName:@"fontawesome" size:40]} andIconPosition:IconPositionLeft];
+    UIAwesomeButton *button4 = [[UIAwesomeButton alloc] initWithFrame:CGRectMake(10, 400, 280, 50) text:@"Testinggggg" iconImage:[UIImage imageNamed:@"bell.png"] attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:15], NSForegroundColorAttributeName : [UIColor whiteColor], @"IconFont" : [UIFont fontWithName:@"fontawesome" size:40]} andIconPosition:IconPositionLeft];
     [button4 setBackgroundColor:[UIColor colorWithRed:205.0f/255 green:35.0f/255 blue:44.0f/255 alpha:1.0] forUIControlState:UIControlStateNormal];
     [button4 setBackgroundColor:[UIColor colorWithRed:244.0f/255 green:61.0f/255 blue:91.0f/255 alpha:1.0] forUIControlState:UIControlStateHighlighted];
     [button4 setRadius:3.0];
     [button4 setSeparation:2];
+    [button4 setTextAlignment:NSTextAlignmentRight];
     [button4 setActionBlock:^{
         NSLog(@"Working!");
     }];
-    [button4 setTextAlignment:NSTextAlignmentCenter];
     [self.view addSubview:button4];
 
 }
