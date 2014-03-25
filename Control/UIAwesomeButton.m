@@ -296,6 +296,7 @@
     //Setting attributes
     self.attributes[@(state)]=attributes;
     [self updateButtonFormat];
+    [self updateButtonContent];
 }
 
 -(void)setBackgroundColor:(UIColor*)color forUIControlState:(UIControlState)state{

@@ -104,6 +104,11 @@
     [button4 setRadius:3.0];
     [button4 setSeparation:2];
     [button4 setTextAlignment:NSTextAlignmentRight];
+    [button4 setButtonText:[NSString stringWithFormat:@"%@",@"Project!"]];
+    [button4 setAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15], NSForegroundColorAttributeName:[UIColor whiteColor]} forUIControlState:UIControlStateNormal];
+    [button4 setButtonText:[NSString stringWithFormat:@"%@",@"Project!"]];
+    [button4 setAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15], NSForegroundColorAttributeName:[UIColor whiteColor]} forUIControlState:UIControlStateNormal];    [button4 setButtonText:[NSString stringWithFormat:@"%@",@"Project!"]];
+    [button4 setAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15], NSForegroundColorAttributeName:[UIColor whiteColor]} forUIControlState:UIControlStateNormal];
     [button4 setActionBlock:^{
         NSLog(@"Working!");
     }];
