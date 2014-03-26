@@ -34,6 +34,7 @@ typedef void (^block)();
 -(void)setSeparation:(CGFloat)separation;
 -(void)setTextAlignment:(NSTextAlignment)alignment;
 -(void)setHorizontalMargin:(CGFloat)margin;
+-(void)setIconImageView:(UIImageView *)iconImageView;
 
 //Getters
 -(NSString*)getButtonText;
