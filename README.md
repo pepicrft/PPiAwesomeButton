@@ -4,6 +4,13 @@ PPiAwesomeButton
 UIButton category with new methods to setup a button with text + FontAwesome Icon.
 
 ### Updates
+##### 26-March-2014 - Cocoapods version - 1.3.7
+Added the feature to set the icon passing an UIImageView
+```objc
+-(void)setIconImageView:(UIImageView *)iconImageView;
+```
+Fixed issue related with vertical size of subviews
+
 ##### 25-March-2014 - Cocoapods version - 1.3.7
 Added the possibility to set the icon in UIImage format. The way to do that is just using the methods:
 ```objc
