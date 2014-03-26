@@ -23,6 +23,8 @@
 @end
 
 @implementation UIAwesomeButton
+@synthesize iconImageView = _iconImageView;
+
 +(UIAwesomeButton*)buttonWithType:(UIButtonType)type text:(NSString *)text iconImage:(UIImage *)icon attributes:(NSDictionary *)attributes andIconPosition:(IconPosition)position
 {
     UIAwesomeButton *button = [[UIAwesomeButton alloc] initWithFrame:CGRectZero text:text iconImage:icon attributes:attributes andIconPosition:position];
@@ -71,7 +73,7 @@
     // Horizontal layout
     [self addSubview:self.textLabel];
     if(self.icon)[self addSubview:self.iconLabel];
-    if(self.iconImage)[self addSubview:self.iconImageView];
+    if(self.iconImageView.image)[self addSubview:self.iconImageView];
 
 
     // Elements order ICON/TEXT
@@ -90,7 +92,7 @@
     float margin  = self.frame.size.height*0.10;
     [self centerVertically:element1 element2:element2 margin:margin];
 
-
+    [self.iconImageView needsUpdateConstraints];
     [self.iconLabel needsUpdateConstraints];
     [self.textLabel needsUpdateConstraints];
 }
@@ -115,8 +117,8 @@
 
 - (void)centerVertically:(UIView *)element1 element2:(UIView *)element2 margin:(float)margin
 {
-    [element1 setFrame:CGRectMake(element1.frame.origin.x, element1.frame.origin.y, element1.frame.size.width, self.frame.size.height)];
-    [element2 setFrame:CGRectMake(element2.frame.origin.x, element2.frame.origin.y, element2.frame.size.width, self.frame.size.height)];
+    [element1 setFrame:CGRectMake(element1.frame.origin.x, 0, element1.frame.size.width, self.frame.size.height)];
+    [element2 setFrame:CGRectMake(element2.frame.origin.x, 0, element2.frame.size.width, self.frame.size.height)];
 }
 
 
@@ -185,7 +187,9 @@
         [self.iconLabel setText:@""];
     }
 
-    [self.iconImageView setImage:self.iconImage];
+    if (self.iconImage) {
+        [self.iconImageView setImage:self.iconImage];
+    }
 }
 #pragma mark -
 #pragma mark Touches
@@ -336,7 +340,13 @@
 }
 -(void)setIconPosition:(IconPosition)iconPosition{
     _iconPosition = iconPosition;
+}
 
+-(void)setIconImageView:(UIImageView *)iconImageView
+{
+    _iconImageView = iconImageView;
+    _iconImage = nil;
+    [self updateButtonContent];
 }
 
 #pragma mark - Getters

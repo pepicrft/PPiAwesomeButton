@@ -4,7 +4,7 @@ rvm: 1.9.3
 
 before_install:
   - cd PPiAwesomeButton-Demo
-  - gem install --no-rdoc --no-ri cocoapods -v 0.28
+  - gem install --no-rdoc --no-ri cocoapods -v 0.29
   - gem install --no-rdoc --no-ri pr-changelog mechanize json mcbean xcpretty
 
 script:
