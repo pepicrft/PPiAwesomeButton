@@ -152,7 +152,12 @@
         }
         else if([element1 isKindOfClass:[UIImageView class]])
         {
-            element1Width = self.iconImageView.frame.size.width;
+            if (self.iconImageView.frame.size.width) {
+                element1Width = self.iconImageView.frame.size.width;
+            }
+            else {
+                element1Width = self.iconImage.size.width;
+            }
         }
     if([element2 isKindOfClass:[UILabel class]])
         {
@@ -162,7 +167,12 @@
         }
         else if([element2 isKindOfClass:[UIImageView class]])
         {
-            element2Width = self.iconImageView.frame.size.width;
+            if (self.iconImageView.frame.size.width) {
+                element1Width = self.iconImageView.frame.size.width;
+            }
+            else {
+                element1Width = self.iconImage.size.width;
+            }
         }
 
     if(self.textAligment == NSTextAlignmentCenter){
