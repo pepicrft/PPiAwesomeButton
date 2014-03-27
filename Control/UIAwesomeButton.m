@@ -67,14 +67,21 @@
     [self.iconLabel removeFromSuperview];
     [self.iconImageView removeFromSuperview];
 
+    for (UIView *view in self.subviews) {
+        [view removeFromSuperview];
+    }
+    
     //Setting labels
     [self updateSubviewsContent];
 
     // Horizontal layout
     [self addSubview:self.textLabel];
-    if(self.icon)[self addSubview:self.iconLabel];
-    if(self.iconImageView.image)[self addSubview:self.iconImageView];
-
+    if (self.icon) {
+        [self addSubview:self.iconLabel];
+    }
+    if (self.iconImageView.image) {
+        [self addSubview:self.iconImageView];
+    }
 
     // Elements order ICON/TEXT
     UIView *iconElement = self.icon? self.iconLabel : self.iconImageView;
@@ -117,8 +124,20 @@
 
 - (void)centerVertically:(UIView *)element1 element2:(UIView *)element2 margin:(float)margin
 {
-    [element1 setFrame:CGRectMake(element1.frame.origin.x, 0, element1.frame.size.width, self.frame.size.height)];
-    [element2 setFrame:CGRectMake(element2.frame.origin.x, 0, element2.frame.size.width, self.frame.size.height)];
+    if ([element1 isKindOfClass:[UILabel class]]) {
+        [element1 setFrame:CGRectMake(element1.frame.origin.x, 0, element1.frame.size.width, self.frame.size.height)];
+        
+    }
+    else if ([element1 isKindOfClass:[UIImageView class]]) {
+        [element1 setFrame:CGRectMake(element1.frame.origin.x, self.frame.size.height/2 - element1.frame.size.height/2, element1.frame.size.width, element1.frame.size.height)];
+    }
+    if ([element2 isKindOfClass:[UILabel class]]) {
+        [element2 setFrame:CGRectMake(element2.frame.origin.x, 0, element2.frame.size.width, self.frame.size.height)];
+        
+    }
+    else if ([element2 isKindOfClass:[UIImageView class]]) {
+        [element2 setFrame:CGRectMake(element2.frame.origin.x, self.frame.size.height/2 - element2.frame.size.height/2, element2.frame.size.width, element2.frame.size.height)];
+    }
 }
 
 
@@ -127,14 +146,13 @@
     CGFloat element1Width = 0;
     CGFloat element2Width = 0;
     if([element1 isKindOfClass:[UILabel class]])
-        {
-            [(UILabel*)element1 setTextAlignment:NSTextAlignmentRight];
+    {
+        [(UILabel*)element1 setTextAlignment:NSTextAlignmentRight];
            element1Width = [((UILabel*)element1).text sizeWithFont:((UILabel*)element1).font].width;
         }
         else if([element1 isKindOfClass:[UIImageView class]])
         {
-            [(UIImageView*)element1 setContentMode:UIViewContentModeRight];
-            element1Width = [(UIImageView *) element1 image].size.width;
+            element1Width = self.iconImageView.frame.size.width;
         }
     if([element2 isKindOfClass:[UILabel class]])
         {
@@ -144,8 +162,7 @@
         }
         else if([element2 isKindOfClass:[UIImageView class]])
         {
-            [(UIImageView*)element2 setContentMode:UIViewContentModeLeft];
-            element2Width = [(UIImageView *) element2 image].size.width;
+            element2Width = self.iconImageView.frame.size.width;
         }
 
     if(self.textAligment == NSTextAlignmentCenter){
@@ -363,6 +380,11 @@
 -(UIImage*)getIconImage
 {
     return _iconImage;
+}
+
+-(UIImageView*)getIconImageView
+{
+    return _iconImageView;
 }
 
 -(CGFloat)getRadius

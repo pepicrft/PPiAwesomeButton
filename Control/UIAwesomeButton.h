@@ -44,5 +44,6 @@ typedef void (^block)();
 -(CGFloat)getSeparation;
 -(NSTextAlignment)getTextAlignment;
 -(CGFloat)getHorizontalMargin;
+-(UIImageView*)getIconImageView;
 
 @end
