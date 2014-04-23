@@ -61,6 +61,12 @@
     return self;
 }
 
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    [self updateButtonContent];
+}
+
 -(void)updateButtonContent{
     // Removing from superView
     [self.textLabel removeFromSuperview];
@@ -102,6 +108,8 @@
     [self.iconImageView needsUpdateConstraints];
     [self.iconLabel needsUpdateConstraints];
     [self.textLabel needsUpdateConstraints];
+    
+    // Setting frame
 }
 
 
