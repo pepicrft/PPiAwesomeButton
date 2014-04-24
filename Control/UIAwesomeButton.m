@@ -61,10 +61,12 @@
     return self;
 }
 
-- (void)layoutSubviews
+- (void)setFrame:(CGRect)frame
 {
+    [super setFrame:frame];
     [self updateButtonContent];
 }
+
 
 -(void)updateButtonContent{
     // Removing from superView
@@ -103,12 +105,6 @@
     // Vertical layout
     float margin  = self.frame.size.height*0.10;
     [self centerVertically:element1 element2:element2 margin:margin];
-
-    [self.iconImageView needsUpdateConstraints];
-    [self.iconLabel needsUpdateConstraints];
-    [self.textLabel needsUpdateConstraints];
-    
-    // Setting frame
 }
 
 
