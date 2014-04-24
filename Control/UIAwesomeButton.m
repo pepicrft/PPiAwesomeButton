@@ -63,7 +63,6 @@
 
 - (void)layoutSubviews
 {
-    [super layoutSubviews];
     [self updateButtonContent];
 }
 
