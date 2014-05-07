@@ -2,8 +2,6 @@ PPiAwesomeButton
 ================
 
 UIButton category with new methods to setup a button with text + FontAwesome Icon.
-[workout](eightfit://workouts/123)
-eightfit://workouts/123
 
 ### Updates
 ##### 26-March-2014 - Cocoapods version - 1.3.7
