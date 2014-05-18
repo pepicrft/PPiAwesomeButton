@@ -255,12 +255,20 @@ static char separationKey;
 }
 
 // override enabled
--(void)setEnabled:(BOOL)enabled {
-    [super setEnabled:enabled];
+-(void)swizzle_setEnabled:(BOOL)enabled {
+    [self swizzle_setEnabled:enabled];
     if (enabled) {
         [self updateButtonFormatForUIControlState:UIControlStateNormal];
     } else {
         [self updateButtonFormatForUIControlState:UIControlStateDisabled];
     }
+}
+
++ (void)load {
+    Method original, swizzle;
+    
+    original = class_getInstanceMethod(self, @selector(setEnabled:));
+    swizzle = class_getInstanceMethod(self, @selector(swizzle_setEnabled:));
+    method_exchangeImplementations(original, swizzle);
 }
 @end
