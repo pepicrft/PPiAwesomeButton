@@ -153,21 +153,21 @@ static char separationKey;
 #pragma mark Touches
 
 - (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-	[super touchesBegan:touches withEvent:event];
     if([self isAwesome])
         [self updateButtonFormatForUIControlState:UIControlStateHighlighted];
+    [super touchesBegan:touches withEvent:event];
 }
 
 - (void) touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
-	[super touchesCancelled:touches withEvent:event];
     if([self isAwesome])
         [self updateButtonFormatForUIControlState:UIControlStateNormal];
+    [super touchesCancelled:touches withEvent:event];
 }
 
 - (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-    [super touchesEnded:touches withEvent:event];
     if([self isAwesome])
         [self updateButtonFormatForUIControlState:UIControlStateNormal];
+    [super touchesEnded:touches withEvent:event];
 }
 
 
