@@ -166,7 +166,7 @@ static char separationKey;
 
 - (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
     [super touchesEnded:touches withEvent:event];
-    //if([self isAwesome])
+    if([self isAwesome])
         [self updateButtonFormatForUIControlState:UIControlStateNormal];
 }
 
