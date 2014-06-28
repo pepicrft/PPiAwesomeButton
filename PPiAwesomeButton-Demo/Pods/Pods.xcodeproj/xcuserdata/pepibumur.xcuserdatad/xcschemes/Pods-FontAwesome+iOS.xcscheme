@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0500"
+   LastUpgradeVersion = "0510"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "8DF23FC9009C4B9F9E2A618C"
+               BlueprintIdentifier = "0AEDD65BE9414D9EB9D32640"
                BuildableName = "libPods-FontAwesome+iOS.a"
                BlueprintName = "Pods-FontAwesome+iOS"
                ReferencedContainer = "container:Pods.xcodeproj">
