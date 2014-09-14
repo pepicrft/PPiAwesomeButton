@@ -11,7 +11,7 @@
 #import "UIButton+PPiAwesome.h"
 
 typedef void (^block)();
-@interface UIAwesomeButton : UIView
+@interface UIAwesomeButton : UIControl
 
 @property (nonatomic) IconPosition iconPosition;
 @property (nonatomic,strong) NSDictionary *textAttributes;

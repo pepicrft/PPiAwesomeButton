@@ -36,7 +36,9 @@
     UIAwesomeButton *button = [[UIAwesomeButton alloc] initWithFrame:CGRectZero text:text icon:icon attributes:attributes andIconPosition:position];
     return button;
 }
--(id)initWithFrame:(CGRect)frame text:(NSString *)text icon:(NSString *)icon attributes:(NSDictionary *)attributes andIconPosition:(IconPosition)position{
+
+-(id)initWithFrame:(CGRect)frame text:(NSString *)text icon:(NSString *)icon attributes:(NSDictionary *)attributes andIconPosition:(IconPosition)position
+{
     self=[super initWithFrame:frame];
     if(self){
         [self setIcon:icon andButtonText:text];
@@ -73,14 +75,14 @@
     [self.textLabel removeFromSuperview];
     [self.iconLabel removeFromSuperview];
     [self.iconImageView removeFromSuperview];
-
+    
     for (UIView *view in self.subviews) {
         [view removeFromSuperview];
     }
     
     //Setting labels
     [self updateSubviewsContent];
-
+    
     // Horizontal layout
     [self addSubview:self.textLabel];
     if (self.icon) {
@@ -89,7 +91,7 @@
     if (self.iconImageView.image) {
         [self addSubview:self.iconImageView];
     }
-
+    
     // Elements order ICON/TEXT
     UIView *iconElement = self.icon? self.iconLabel : self.iconImageView;
     UIView *element1 = iconElement;
@@ -98,10 +100,10 @@
         element1 = self.textLabel;
         element2 = iconElement;
     }
-
+    
     //Horizontal layout
     [self centerHorizontally:element1 element2:element2];
-
+    
     // Vertical layout
     float margin  = self.frame.size.height*0.10;
     [self centerVertically:element1 element2:element2 margin:margin];
@@ -120,7 +122,7 @@
     {
         [(UILabel*)element2 setTextAlignment:NSTextAlignmentLeft];
     }
-
+    
     [self ditributeHorizontally:element1 element2:element2];
 }
 
@@ -151,33 +153,33 @@
     if([element1 isKindOfClass:[UILabel class]])
     {
         [(UILabel*)element1 setTextAlignment:NSTextAlignmentRight];
-           element1Width = [((UILabel*)element1).text sizeWithFont:((UILabel*)element1).font].width;
+        element1Width = [((UILabel*)element1).text sizeWithFont:((UILabel*)element1).font].width;
+    }
+    else if([element1 isKindOfClass:[UIImageView class]])
+    {
+        if (self.iconImageView.frame.size.width) {
+            element1Width = self.iconImageView.frame.size.width;
         }
-        else if([element1 isKindOfClass:[UIImageView class]])
-        {
-            if (self.iconImageView.frame.size.width) {
-                element1Width = self.iconImageView.frame.size.width;
-            }
-            else {
-                element1Width = self.iconImage.size.width;
-            }
+        else {
+            element1Width = self.iconImage.size.width;
         }
+    }
     if([element2 isKindOfClass:[UILabel class]])
-        {
-            [(UILabel*)element2 setTextAlignment:NSTextAlignmentLeft];
-            element2Width = [((UILabel*)element2).text sizeWithFont:((UILabel*)element2).font].width;
-
+    {
+        [(UILabel*)element2 setTextAlignment:NSTextAlignmentLeft];
+        element2Width = [((UILabel*)element2).text sizeWithFont:((UILabel*)element2).font].width;
+        
+    }
+    else if([element2 isKindOfClass:[UIImageView class]])
+    {
+        if (self.iconImageView.frame.size.width) {
+            element1Width = self.iconImageView.frame.size.width;
         }
-        else if([element2 isKindOfClass:[UIImageView class]])
-        {
-            if (self.iconImageView.frame.size.width) {
-                element1Width = self.iconImageView.frame.size.width;
-            }
-            else {
-                element1Width = self.iconImage.size.width;
-            }
+        else {
+            element1Width = self.iconImage.size.width;
         }
-
+    }
+    
     if(self.textAligment == NSTextAlignmentCenter){
         CGFloat originX = (self.frame.size.width - (element1Width+ self.separation +element2Width))/2;
         [element1 setFrame:CGRectMake(originX, element1.frame.origin.y, element1Width, element1.frame.size.height)];
@@ -194,67 +196,79 @@
 }
 
 
--(void)updateButtonFormat{
-    // Setting background color
+-(void)updateButtonFormat
+{
     [self setBackgroundColor:[self backgroundColorForState:self.controlState]];
-
-    //Setting labels
     [self updateSubviewsContent];
 }
+
 -(void)updateSubviewsContent
 {
     // Setting the constraints
-    if(self.buttonText){
+    if(self.buttonText) {
         [self.textLabel setAttributedText:[[NSAttributedString alloc] initWithString:self.buttonText attributes:[self textAttributesForState:self.controlState]]];
         [self.textLabel setBackgroundColor:[UIColor clearColor]];
-    }else{
+    }
+    else{
         [self.textLabel setText:@""];
     }
+    
     if(self.icon){
         [self.iconLabel setAttributedText:[[NSAttributedString alloc] initWithString:[NSString fontAwesomeIconStringForIconIdentifier:self.icon] attributes:[self iconAttributesForState:self.controlState]]];
         [self.iconLabel setBackgroundColor:[UIColor clearColor]];
-    }else{
+    }
+    else{
         [self.iconLabel setText:@""];
     }
-
+    
     if (self.iconImage) {
         [self.iconImageView setImage:self.iconImage];
     }
 }
-#pragma mark -
-#pragma mark Touches
 
-- (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-	[super touchesBegan:touches withEvent:event];
+
+#pragma mark - Touches
+
+- (void) touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [super touchesBegan:touches withEvent:event];
     [self setControlState:UIControlStateHighlighted];
 }
 
-- (void) touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event {
-	[super touchesCancelled:touches withEvent:event];
+- (void) touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [super touchesCancelled:touches withEvent:event];
     [self setControlState:UIControlStateNormal];
 }
 
-- (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+- (void) touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
     [super touchesEnded:touches withEvent:event];
-    //if([self isAwesome])
     [self setControlState:UIControlStateNormal];
+    
+    // Calling action block if it exists
     if(self.actionBlock){
         self.actionBlock();
     }
 }
 
 
-#pragma mark -
 #pragma mark - Lazy Instantiation
--(NSMutableDictionary*)attributes{
+
+-(NSMutableDictionary*)attributes
+{
     if(!_attributes) _attributes = [NSMutableDictionary new];
     return _attributes;
 }
--(NSMutableDictionary*)backgroundColors{
+
+-(NSMutableDictionary*)backgroundColors
+{
     if(!_backgroundColors) _backgroundColors = [NSMutableDictionary new];
     return _backgroundColors;
 }
--(UILabel*)textLabel{
+
+-(UILabel*)textLabel
+{
     if(!_textLabel){
         _textLabel = [UILabel new];
         [_textLabel setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];
@@ -263,7 +277,9 @@
     }
     return _textLabel;
 }
--(UILabel*)iconLabel{
+
+-(UILabel*)iconLabel
+{
     if(!_iconLabel){
         _iconLabel = [UILabel new];
         [_iconLabel setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];
@@ -275,7 +291,7 @@
 
 -(UIImageView*)iconImageView
 {
-    if(!_iconImageView){
+    if(!_iconImageView) {
         _iconImageView = [UIImageView new];
         [_iconImageView setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];
         [_iconImageView setContentCompressionResistancePriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];
@@ -285,8 +301,11 @@
     return _iconImageView;
 }
 
+
 #pragma mark - Custom getters
--(NSDictionary*)iconAttributesForState:(UIControlState)state{
+
+-(NSDictionary*)iconAttributesForState:(UIControlState)state
+{
     NSMutableDictionary *iconAttributes = [[self textAttributesForState:state] mutableCopy];
     if ([iconAttributes objectForKey:@"IconFont"]) {
         iconAttributes[NSFontAttributeName] = iconAttributes[@"IconFont"];
@@ -296,79 +315,109 @@
     }
     return iconAttributes;
 }
--(NSDictionary*)textAttributesForState:(UIControlState)state{
+
+-(NSDictionary*)textAttributesForState:(UIControlState)state
+{
     if(self.attributes[@(state)]) return self.attributes[@(state)];
     else return self.attributes[@(UIControlStateNormal)];
 }
--(UIColor*)backgroundColorForState:(UIControlState)state{
+
+-(UIColor*)backgroundColorForState:(UIControlState)state
+{
     if(self.backgroundColors[@(state)]) return self.backgroundColors[@(state)];
     else return self.backgroundColors[@(UIControlStateNormal)];
-
+    
 }
--(NSNumber*)horizontalmargin{
+
+-(NSNumber*)horizontalmargin
+{
     if(!_horizontalmargin) _horizontalmargin = @(5);
     return _horizontalmargin;
 }
+
+
 #pragma  mark - Setters
--(void)setHorizontalMargin:(CGFloat)margin{
+
+-(void)setHorizontalMargin:(CGFloat)margin
+{
     _horizontalmargin = @(margin);
     [self updateButtonContent];
 }
--(void)setTextAlignment:(NSTextAlignment)alignment{
+
+-(void)setTextAlignment:(NSTextAlignment)alignment
+{
     _textAligment=alignment;
     [self updateButtonContent];
 }
--(void)setRadius:(CGFloat)radius{
+
+-(void)setRadius:(CGFloat)radius
+{
     self.layer.cornerRadius=radius;
 }
 
--(void)setSeparation:(CGFloat)separation{
+-(void)setSeparation:(CGFloat)separation
+{
     _separation = separation;
     [self updateButtonContent];
 }
--(void)setAttributes:(NSDictionary*)attributes forUIControlState:(UIControlState)state{
+
+-(void)setAttributes:(NSDictionary*)attributes forUIControlState:(UIControlState)state
+{
     //Setting attributes
     self.attributes[@(state)]=attributes;
     [self updateButtonFormat];
     [self updateButtonContent];
 }
 
--(void)setBackgroundColor:(UIColor*)color forUIControlState:(UIControlState)state{
+-(void)setBackgroundColor:(UIColor*)color forUIControlState:(UIControlState)state
+{
     self.backgroundColors[@(state)]=color;
     [self updateButtonFormat];
 }
--(void)setControlState:(UIControlState)controlState{
+
+-(void)setControlState:(UIControlState)controlState
+{
     _controlState = controlState;
     [self updateButtonFormat];
 }
--(void)setIcon:(NSString *)icon andButtonText:(NSString*)text{
+
+-(void)setIcon:(NSString *)icon andButtonText:(NSString*)text
+{
     _buttonText = text;
     _icon = icon;
     _iconImage = nil;
     [self updateButtonContent];
 }
--(void)setIconImage:(UIImage *)iconImage andButtonText:(NSString*)text{
+
+-(void)setIconImage:(UIImage *)iconImage andButtonText:(NSString*)text
+{
     _buttonText = text;
     _iconImage = iconImage;
     _icon = nil;
     [self updateButtonContent];
 }
--(void)setButtonText:(NSString *)buttonText{
+
+-(void)setButtonText:(NSString *)buttonText
+{
     _buttonText = buttonText;
     [self updateButtonContent];
 }
 
--(void)setIconImage:(UIImage *)icon{
+-(void)setIconImage:(UIImage *)icon
+{
     _icon = nil;
     _iconImage = icon;
     [self updateButtonContent];
 }
--(void)setIcon:(NSString *)icon{
+
+-(void)setIcon:(NSString *)icon
+{
     _icon = icon;
     _iconImage = nil;
     [self updateButtonContent];
 }
--(void)setIconPosition:(IconPosition)iconPosition{
+-(void)setIconPosition:(IconPosition)iconPosition
+{
     _iconPosition = iconPosition;
 }
 
@@ -379,7 +428,9 @@
     [self updateButtonContent];
 }
 
+
 #pragma mark - Getters
+
 -(NSString*)getButtonText
 {
     return _buttonText;
