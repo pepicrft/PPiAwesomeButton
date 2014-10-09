@@ -273,7 +273,6 @@
         _textLabel = [UILabel new];
         [_textLabel setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];
         [_textLabel setContentCompressionResistancePriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];
-        [_textLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
     }
     return _textLabel;
 }
@@ -284,7 +283,6 @@
         _iconLabel = [UILabel new];
         [_iconLabel setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];
         [_iconLabel setContentCompressionResistancePriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];
-        [_iconLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
     }
     return _iconLabel;
 }
@@ -295,7 +293,6 @@
         _iconImageView = [UIImageView new];
         [_iconImageView setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];
         [_iconImageView setContentCompressionResistancePriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisVertical];
-        [_iconImageView setTranslatesAutoresizingMaskIntoConstraints:NO];
         [_iconImageView setContentMode:UIViewContentModeCenter];
     }
     return _iconImageView;
