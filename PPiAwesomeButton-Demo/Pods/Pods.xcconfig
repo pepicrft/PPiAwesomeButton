@@ -1,5 +1,0 @@
-GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/FontAwesome+iOS" "${PODS_ROOT}/Headers/UIView+AutoLayout"
-OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers" -isystem "${PODS_ROOT}/Headers/FontAwesome+iOS" -isystem "${PODS_ROOT}/Headers/UIView+AutoLayout"
-OTHER_LDFLAGS = -ObjC -framework CoreGraphics -framework Foundation -framework UIKit
-PODS_ROOT = ${SRCROOT}/Pods
