@@ -7,19 +7,18 @@
 //
 
 #import "UIAwesomeButton.h"
-#import "UIView+AutoLayout.h"
 @interface UIAwesomeButton ()
-@property (nonatomic,strong) NSMutableDictionary *backgroundColors;
-@property (nonatomic,strong) NSMutableDictionary *attributes;
-@property (nonatomic,strong) UILabel *iconLabel, *textLabel;
-@property (nonatomic,strong) UIImageView *iconImageView;
-@property (nonatomic) UIControlState controlState;
 @property (nonatomic) CGFloat separation;
+@property (nonatomic) NSTextAlignment textAligment;
+@property (nonatomic) UIControlState controlState;
+@property (nonatomic,strong) NSMutableDictionary *attributes;
+@property (nonatomic,strong) NSMutableDictionary *backgroundColors;
+@property (nonatomic,strong) NSNumber *horizontalmargin;
 @property (nonatomic,strong) NSString *buttonText;
 @property (nonatomic,strong) NSString *icon;
 @property (nonatomic,strong) UIImage *iconImage;
-@property (nonatomic) NSTextAlignment textAligment;
-@property (nonatomic,strong) NSNumber *horizontalmargin;
+@property (nonatomic,strong) UIImageView *iconImageView;
+@property (nonatomic,strong) UILabel *iconLabel, *textLabel;
 @end
 
 @implementation UIAwesomeButton
@@ -113,7 +112,6 @@
 - (void)centerHorizontally:(UIView *)element1 element2:(UIView *)element2
 {
     //Set aligment of subviews
-    float horizontalMargin = [[self horizontalmargin] floatValue];
     if([element1 isKindOfClass:[UILabel class]])
     {
         [(UILabel*)element1 setTextAlignment:NSTextAlignmentLeft];
@@ -153,7 +151,7 @@
     if([element1 isKindOfClass:[UILabel class]])
     {
         [(UILabel*)element1 setTextAlignment:NSTextAlignmentRight];
-        element1Width = [((UILabel*)element1).text sizeWithFont:((UILabel*)element1).font].width;
+        element1Width = [((UILabel*)element1).text sizeWithAttributes:@{NSFontAttributeName:((UILabel*)element1).font}].width;
     }
     else if([element1 isKindOfClass:[UIImageView class]])
     {
@@ -167,7 +165,7 @@
     if([element2 isKindOfClass:[UILabel class]])
     {
         [(UILabel*)element2 setTextAlignment:NSTextAlignmentLeft];
-        element2Width = [((UILabel*)element2).text sizeWithFont:((UILabel*)element2).font].width;
+        element2Width = [((UILabel*)element2).text sizeWithAttributes:@{NSFontAttributeName:((UILabel*)element2).font}].width;
         
     }
     else if([element2 isKindOfClass:[UIImageView class]])
@@ -248,7 +246,7 @@
     
     // Calling action block if it exists
     if(self.actionBlock){
-        self.actionBlock();
+        self.actionBlock(self);
     }
 }
 
@@ -350,6 +348,13 @@
 -(void)setRadius:(CGFloat)radius
 {
     self.layer.cornerRadius=radius;
+}
+
+- (void)setBorderWidth:(CGFloat)width
+           borderColor:(UIColor *)color
+{
+    [self.layer setBorderWidth:width];
+    [self.layer setBorderColor:color.CGColor];
 }
 
 -(void)setSeparation:(CGFloat)separation

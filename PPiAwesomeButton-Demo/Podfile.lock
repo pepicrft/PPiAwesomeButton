@@ -1,13 +1,10 @@
 PODS:
-  - FontAwesome+iOS (0.0.1)
-  - UIView+AutoLayout (2.0.1)
+  - FontAwesome+iOS (0.1.4)
 
 DEPENDENCIES:
   - FontAwesome+iOS
-  - UIView+AutoLayout
 
 SPEC CHECKSUMS:
-  FontAwesome+iOS: d4841a56a9f47cdaddc97e29c93a3d0f7026e022
-  UIView+AutoLayout: d876c583c3dec28b5c3916175ea4b6ad70a8be34
+  FontAwesome+iOS: 816c20304edef4ca92835de669577005cbaaf261
 
-COCOAPODS: 0.33.1
+COCOAPODS: 0.34.4
