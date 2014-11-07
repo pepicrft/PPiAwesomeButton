@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'PPiAwesomeButton'
-  s.version = '1.5.1'
+  s.version = '1.5.2'
   s.platform = :ios, '7.0'
   s.license = 'MIT'
   s.summary = 'UIButton category with Flat Design and extra methods to set Title+Icon from FontAwesome font'
