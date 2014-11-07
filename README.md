@@ -6,18 +6,20 @@ UIButton category with new methods to setup a button with text + FontAwesome Ico
 
 
 ### Updates
+##### 7th - November 2014 - Cocoapods version - 1.4.2
+- Fixed a bug that caused users having empty buttons (when they tried to create the button with text but without icon)
 
-##### 28 -June-2014 - Cocoapods version - 1.3.7
+##### 28th -June-2014 - Cocoapods version - 1.3.7
 - Updated demo project that didn't work due to UIView+Autolayout category
 
-##### 26-March-2014 - Cocoapods version - 1.3.7
+##### 26th-March-2014 - Cocoapods version - 1.3.7
 Added the feature to set the icon passing an UIImageView
 ```objc
 -(void)setIconImageView:(UIImageView *)iconImageView;
 ```
 Fixed issue related with vertical size of subviews
 
-##### 25-March-2014 - Cocoapods version - 1.3.7
+##### 25th-March-2014 - Cocoapods version - 1.3.7
 Added the possibility to set the icon in UIImage format. The way to do that is just using the methods:
 ```objc
 +(UIAwesomeButton*)buttonWithType:(UIButtonType)type text:(NSString *)text icon:(NSString *)icon attributes:(NSDictionary *)attributes andIconPosition:(IconPosition)position;
