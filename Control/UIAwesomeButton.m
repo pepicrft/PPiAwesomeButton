@@ -92,7 +92,7 @@
     }
     
     // Elements order ICON/TEXT
-    UIView *iconElement = self.icon? self.iconLabel : ? self.iconImageView.image ? self.iconImageView.image : nil;
+    UIView *iconElement = self.icon? self.iconLabel : self.iconImageView.image ? self.iconImageView : nil;
     UIView *element1 = iconElement;
     UIView *element2 = self.textLabel;
     if(self.iconPosition == IconPositionRight){
