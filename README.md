@@ -1,6 +1,8 @@
 PPiAwesomeButton
 ================
 
+### :warning: Important note! This library is not maintained anymore. Feel free to keep it updated by yourself, either forking or asking for bening the contributor.
+
 UIButton category with new methods to setup a button with text + FontAwesome Icon.
 <a href="eightfit://workouts/123">Open App</a>
 
